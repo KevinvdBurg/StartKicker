@@ -1,13 +1,19 @@
-﻿namespace Kickstarter_web
+﻿using System;
+using System.Web;
+using System.Web.Services;
+using System.Web.Services.Protocols;
+using System.ComponentModel;
+
+namespace Kickstarter_web
 {
-    public abstract class Account
+    public class Rewards
     {
-        public Account()
+        public Rewards()
         {
             throw new System.NotImplementedException();
         }
-    
-        public int Email
+
+        public string Name
         {
             get
             {
@@ -18,7 +24,7 @@
             }
         }
 
-        public int Phone
+        public double Price
         {
             get
             {
@@ -29,7 +35,7 @@
             }
         }
 
-        public int Password
+        public string Description
         {
             get
             {
@@ -40,7 +46,7 @@
             }
         }
 
-        public int Name
+        public string Delivery
         {
             get
             {
@@ -51,7 +57,7 @@
             }
         }
 
-        public int Picture
+        public int BackerCount
         {
             get
             {
@@ -62,7 +68,7 @@
             }
         }
 
-        public int Biography
+        public int Quantity
         {
             get
             {
@@ -73,7 +79,7 @@
             }
         }
 
-        public int Location
+        public Rewards PrevReward
         {
             get
             {
@@ -84,7 +90,7 @@
             }
         }
 
-        public int TimeZone
+        public DBReward DBReward
         {
             get
             {
@@ -95,37 +101,9 @@
             }
         }
 
-        public int Vanity_URL
+        public void Method()
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public Backing Backing
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public DBAccount DBAccount
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            throw new System.NotImplementedException();
         }
     }
 }

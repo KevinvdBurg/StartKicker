@@ -6,9 +6,20 @@ using System.ComponentModel;
 
 namespace Kickstarter_web
 {
-    public class Pages
+    public class Category
     {
-        public int URL
+        public string Name
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public Project Project
         {
             get
             {

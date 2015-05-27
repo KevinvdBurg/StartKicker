@@ -6,9 +6,14 @@ using System.ComponentModel;
 
 namespace Kickstarter_web
 {
-    public class Category
+    public class Admin : Account
     {
-        public int Name
+        public Admin()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public string WorkEmail
         {
             get
             {
@@ -19,7 +24,7 @@ namespace Kickstarter_web
             }
         }
 
-        public Project Project
+        public double Salary
         {
             get
             {
@@ -28,6 +33,22 @@ namespace Kickstarter_web
             set
             {
             }
+        }
+
+        public string Department
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public void Method()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

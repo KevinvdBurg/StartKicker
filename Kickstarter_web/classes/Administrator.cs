@@ -6,19 +6,20 @@ using System.ComponentModel;
 
 namespace Kickstarter_web
 {
-    public class Database
+    public class Administrator
     {
-        public Database()
+        public Account Account
         {
-            throw new System.NotImplementedException();
-        }
-    
-        public void Connect()
-        {
-            throw new System.NotImplementedException();
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
         }
 
-        public void Disconnect()
+        public void Login()
         {
             throw new System.NotImplementedException();
         }

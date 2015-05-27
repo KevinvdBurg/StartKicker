@@ -8,7 +8,7 @@ namespace Kickstarter_web
 {
     public class Content
     {
-        public int Head
+        public string Head
         {
             get
             {
@@ -19,7 +19,7 @@ namespace Kickstarter_web
             }
         }
 
-        public int Text
+        public string Text
         {
             get
             {

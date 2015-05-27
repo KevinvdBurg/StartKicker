@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kickstarter_web", "Kickstarter_web\Kickstarter_web.csproj", "{70A21E2C-2327-4B26-8CAA-47CFD7B4604A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartKicker", "Kickstarter_web\StartKicker.csproj", "{70A21E2C-2327-4B26-8CAA-47CFD7B4604A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

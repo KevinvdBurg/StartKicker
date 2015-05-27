@@ -1,19 +1,15 @@
-﻿using System;
-using System.Web;
-using System.Web.Services;
-using System.Web.Services.Protocols;
-using System.ComponentModel;
-
-namespace Kickstarter_web
+﻿namespace Kickstarter_web
 {
-    public class Project
+    using System;
+
+    public abstract class Account
     {
-        public Project()
+        public Account()
         {
             throw new System.NotImplementedException();
         }
-    
-        public int Title
+
+        public string Email
         {
             get
             {
@@ -24,7 +20,7 @@ namespace Kickstarter_web
             }
         }
 
-        public int ShortBlurb
+        public string Phone
         {
             get
             {
@@ -35,7 +31,7 @@ namespace Kickstarter_web
             }
         }
 
-        public int ProjectLocation
+        public string Password
         {
             get
             {
@@ -46,7 +42,7 @@ namespace Kickstarter_web
             }
         }
 
-        public int FundingDuration
+        public string Name
         {
             get
             {
@@ -57,7 +53,7 @@ namespace Kickstarter_web
             }
         }
 
-        public int FundingGoal
+        public string Picture
         {
             get
             {
@@ -68,7 +64,7 @@ namespace Kickstarter_web
             }
         }
 
-        public int ProjectVideo
+        public string Biography
         {
             get
             {
@@ -79,7 +75,7 @@ namespace Kickstarter_web
             }
         }
 
-        public int ProjectDescription
+        public string Location
         {
             get
             {
@@ -90,7 +86,7 @@ namespace Kickstarter_web
             }
         }
 
-        public int RisksAndChallenges
+        public DateTime TimeZone
         {
             get
             {
@@ -101,7 +97,7 @@ namespace Kickstarter_web
             }
         }
 
-        public DBProject DBProject
+        public string Vanity_URL
         {
             get
             {
@@ -112,7 +108,7 @@ namespace Kickstarter_web
             }
         }
 
-        public Rewards Rewards
+        public Backing Backing
         {
             get
             {
@@ -123,18 +119,7 @@ namespace Kickstarter_web
             }
         }
 
-        public Account Account
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public Content Content
+        public DBAccount DBAccount
         {
             get
             {

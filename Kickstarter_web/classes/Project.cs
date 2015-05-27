@@ -6,14 +6,14 @@ using System.ComponentModel;
 
 namespace Kickstarter_web
 {
-    public class Rewards
+    public class Project
     {
-        public Rewards()
+        public Project()
         {
             throw new System.NotImplementedException();
         }
-    
-        public int Name
+
+        public string Title
         {
             get
             {
@@ -24,7 +24,7 @@ namespace Kickstarter_web
             }
         }
 
-        public int Price
+        public string ShortBlurb
         {
             get
             {
@@ -35,7 +35,7 @@ namespace Kickstarter_web
             }
         }
 
-        public int Description
+        public string ProjectLocation
         {
             get
             {
@@ -46,7 +46,7 @@ namespace Kickstarter_web
             }
         }
 
-        public int Delivery
+        public string FundingDuration
         {
             get
             {
@@ -57,7 +57,7 @@ namespace Kickstarter_web
             }
         }
 
-        public int BackerCount
+        public int FundingGoal
         {
             get
             {
@@ -68,7 +68,7 @@ namespace Kickstarter_web
             }
         }
 
-        public int Quantity
+        public string ProjectVideo
         {
             get
             {
@@ -79,7 +79,7 @@ namespace Kickstarter_web
             }
         }
 
-        public Rewards PrevReward
+        public string ProjectDescription
         {
             get
             {
@@ -90,7 +90,7 @@ namespace Kickstarter_web
             }
         }
 
-        public DBReward DBReward
+        public string RisksAndChallenges
         {
             get
             {
@@ -101,9 +101,48 @@ namespace Kickstarter_web
             }
         }
 
-        public void Method()
+        public DBProject DBProject
         {
-            throw new System.NotImplementedException();
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public Rewards Rewards
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public Account Account
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public Content Content
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
         }
     }
 }

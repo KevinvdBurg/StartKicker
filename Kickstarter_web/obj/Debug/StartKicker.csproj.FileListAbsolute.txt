@@ -1,0 +1,7 @@
+C:\Users\Kevin van der Burg\Documents\GitHub\StartKicker\Kickstarter_web\obj\Debug\StartKicker.csprojResolveAssemblyReference.cache
+C:\Users\Kevin van der Burg\Documents\GitHub\StartKicker\Kickstarter_web\bin\Kickstarter_web.dll.config
+C:\Users\Kevin van der Burg\Documents\GitHub\StartKicker\Kickstarter_web\bin\Kickstarter_web.dll
+C:\Users\Kevin van der Burg\Documents\GitHub\StartKicker\Kickstarter_web\bin\Kickstarter_web.pdb
+C:\Users\Kevin van der Burg\Documents\GitHub\StartKicker\Kickstarter_web\bin\Oracle.DataAccess.dll
+C:\Users\Kevin van der Burg\Documents\GitHub\StartKicker\Kickstarter_web\obj\Debug\Kickstarter_web.dll
+C:\Users\Kevin van der Burg\Documents\GitHub\StartKicker\Kickstarter_web\obj\Debug\Kickstarter_web.pdb

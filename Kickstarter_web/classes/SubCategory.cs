@@ -6,14 +6,9 @@ using System.ComponentModel;
 
 namespace Kickstarter_web
 {
-    public class Backing
+    public class SubCategory
     {
-        public Backing()
-        {
-            throw new System.NotImplementedException();
-        }
-    
-        public int PledgeAmount
+        public string Name
         {
             get
             {
@@ -24,18 +19,7 @@ namespace Kickstarter_web
             }
         }
 
-        public int Betaald
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public DBBacking DBBacking
+        public Category Category
         {
             get
             {
