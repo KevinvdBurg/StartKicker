@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Kickstarter_web
 {
-    public partial class index1 : System.Web.UI.Page
+    public partial class sub : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

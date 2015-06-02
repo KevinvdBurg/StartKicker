@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Kickstarter_web
+namespace Kickstarter_web.pages
 {
-    public partial class index1 : System.Web.UI.Page
+    public partial class template : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
