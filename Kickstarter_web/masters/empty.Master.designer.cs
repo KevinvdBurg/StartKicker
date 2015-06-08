@@ -10,78 +10,60 @@
 namespace Kickstarter_web {
     
     
-    public partial class index2 {
+    public partial class empty {
         
         /// <summary>
-        /// backNow1 control.
+        /// head control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button backNow1;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
         
         /// <summary>
-        /// info1 control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button info1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// backNow2 control.
+        /// navLeft control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button backNow2;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder navLeft;
         
         /// <summary>
-        /// info2 control.
+        /// navRight control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button info2;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder navRight;
         
         /// <summary>
-        /// backNow3 control.
+        /// jumbotron control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button backNow3;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder jumbotron;
         
         /// <summary>
-        /// info3 control.
+        /// container control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button info3;
-        
-        /// <summary>
-        /// backNow4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button backNow4;
-        
-        /// <summary>
-        /// info4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button info4;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder container;
     }
 }

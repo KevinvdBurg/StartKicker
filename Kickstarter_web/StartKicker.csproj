@@ -70,7 +70,6 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="index.aspx" />
-    <Content Include="index2.aspx" />
     <Content Include="js\main.js" />
     <Content Include="js\vendor\bootstrap.js" />
     <Content Include="js\vendor\bootstrap.min.js" />
@@ -83,9 +82,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="WebForm1.aspx" />
-    <Content Include="main.Master" />
-    <Content Include="sub.Master" />
+    <Content Include="masters\empty.Master" />
+    <Content Include="masters\one.master" />
+    <Content Include="masters\LoggedIn.master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -122,12 +121,26 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="index2.aspx.cs">
-      <DependentUpon>index2.aspx</DependentUpon>
+    <Compile Include="masters\empty.Master.cs">
+      <DependentUpon>empty.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="index2.aspx.designer.cs">
-      <DependentUpon>index2.aspx</DependentUpon>
+    <Compile Include="masters\empty.Master.designer.cs">
+      <DependentUpon>empty.Master</DependentUpon>
+    </Compile>
+    <Compile Include="masters\LoggedIn.master.cs">
+      <DependentUpon>LoggedIn.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="masters\LoggedIn.master.designer.cs">
+      <DependentUpon>LoggedIn.master</DependentUpon>
+    </Compile>
+    <Compile Include="masters\one.master.cs">
+      <DependentUpon>one.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="masters\one.master.designer.cs">
+      <DependentUpon>one.master</DependentUpon>
     </Compile>
     <Compile Include="pages\registeren.aspx.cs">
       <DependentUpon>registeren.aspx</DependentUpon>
@@ -147,27 +160,6 @@
     <Compile Include="classes\Rewards.cs" />
     <Compile Include="classes\SubCategory.cs" />
     <Compile Include="classes\User.cs" />
-    <Compile Include="main.Master.cs">
-      <DependentUpon>main.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="main.Master.designer.cs">
-      <DependentUpon>main.Master</DependentUpon>
-    </Compile>
-    <Compile Include="sub.Master.cs">
-      <DependentUpon>sub.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="sub.Master.designer.cs">
-      <DependentUpon>sub.Master</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

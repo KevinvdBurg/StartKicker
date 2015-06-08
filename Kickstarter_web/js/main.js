@@ -1,3 +1,6 @@
-$('.dropdown-menu').click(function (e) {
-    e.stopPropagation();
+$(document).ready(function () {
+    $('.dropdown-menu').click(function (event) {
+        event.stopPropagation();
+    });
 });
+

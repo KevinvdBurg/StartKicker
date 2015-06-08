@@ -1,0 +1,16 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masters/empty.Master" AutoEventWireup="true" CodeBehind="LoggedIn.master.cs" Inherits="Kickstarter_web.masters.LoggedIn" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="navLeft" runat="server">
+    <li><a href="#">Mijn projecten</a></li>
+    <li><a href="#">Creeer project</a></li>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="navRight" runat="server">
+    <li><a href="#">Uitloggen</a></li>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="jumbotron" runat="server">
+    <asp:ContentPlaceHolder ID="container_jumbo" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="container" runat="server">
+    <asp:ContentPlaceHolder ID="container_bottom" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>

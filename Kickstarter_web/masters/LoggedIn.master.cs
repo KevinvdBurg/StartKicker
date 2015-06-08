@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Kickstarter_web
+namespace Kickstarter_web.masters
 {
-    public partial class sub : System.Web.UI.MasterPage
+    public partial class LoggedIn : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
