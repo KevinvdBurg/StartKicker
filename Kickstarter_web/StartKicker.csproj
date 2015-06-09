@@ -41,7 +41,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Oracle.DataAccess, Version=4.112.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>dlls\Oracle.DataAccess.dll</HintPath>
+      <HintPath>..\..\ICT4Events-MedewerkerSysteem\MedewerkerSysteem\MedewerkerSysteem\dlls\Oracle.DataAccess.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -94,8 +94,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="pages\registeren.aspx" />
-    <Content Include="pages\template.aspx" />
+    <Content Include="pages\dashboard.aspx" />
     <Content Include="tile-wide.png" />
     <Content Include="tile.png" />
     <Content Include="Web.config" />
@@ -114,6 +113,8 @@
     <Compile Include="classes\DBReward.cs" />
     <Compile Include="classes\Pages.cs" />
     <Compile Include="classes\Project.cs" />
+    <Compile Include="classes\SessionKey.cs" />
+    <Compile Include="DBLogin.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -142,19 +143,12 @@
     <Compile Include="masters\one.master.designer.cs">
       <DependentUpon>one.master</DependentUpon>
     </Compile>
-    <Compile Include="pages\registeren.aspx.cs">
-      <DependentUpon>registeren.aspx</DependentUpon>
+    <Compile Include="pages\dashboard.aspx.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pages\registeren.aspx.designer.cs">
-      <DependentUpon>registeren.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="pages\template.aspx.cs">
-      <DependentUpon>template.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="pages\template.aspx.designer.cs">
-      <DependentUpon>template.aspx</DependentUpon>
+    <Compile Include="pages\dashboard.aspx.designer.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="classes\Rewards.cs" />

@@ -8,47 +8,37 @@ namespace Kickstarter_web
 {
     public class Admin : Account
     {
-        public Admin()
-        {
-            throw new System.NotImplementedException();
-        }
-
         public string WorkEmail
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         public double Salary
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         public string Department
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
-        public void Method()
+        public Admin(int accountId, string email, string phone, string password, string name, string picture, string biography, string location, DateTime timeZone, string vanityUrl, string workEmail, double salary, string department)
+            : base(accountId, email, phone, password, name, picture, biography, location, timeZone, vanityUrl)
         {
-            throw new System.NotImplementedException();
+            WorkEmail = workEmail;
+            Salary = salary;
+            Department = department;    
+        }
+
+
+        public Admin(int accountId)
+            : base(accountId)
+        {
+            
         }
     }
 }

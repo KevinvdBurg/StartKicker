@@ -10,26 +10,15 @@
   <Class Name="Kickstarter_web.Account">
     <Position X="7" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAACIAAAAABAIAAAQAAAAAAAACAAAAIAAAkEA=</HashCode>
+      <HashCode>AAAAgAAAACIAAAAABgIAAAQAAAAAAAACAAAAIAAAAEA=</HashCode>
       <FileName>classes\Account.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Backing" />
-      <Property Name="DBAccount" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="Kickstarter_web.Admin">
     <Position X="9.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAACAAAAAAAAAAAAAgAAAAEAAAAEAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAEAAAAEAAAAAAAAAAAAA=</HashCode>
       <FileName>classes\Admin.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Kickstarter_web.User">
-    <Position X="9.25" Y="3" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>classes\User.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Kickstarter_web.DBAccount">
@@ -134,14 +123,18 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Kickstarter_web.Administrator">
-    <Position X="12.5" Y="1" Width="1.5" />
+    <Position X="12" Y="9.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAEA=</HashCode>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
       <FileName>classes\Administrator.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Account" />
-    </ShowAsAssociation>
+  </Class>
+  <Class Name="Kickstarter_web.DBLogin">
+    <Position X="9.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>DBLogin.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

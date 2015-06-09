@@ -7,19 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Kickstarter_web {
-
-
-    public partial class registeren
-    {
+namespace Kickstarter_web.pages {
+    
+    
+    public partial class dashboard {
         
         /// <summary>
-        /// signin control.
+        /// Gebruiker_ID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button signin;
+        protected global::System.Web.UI.WebControls.Label Gebruiker_ID;
     }
 }

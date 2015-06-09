@@ -13,6 +13,15 @@ namespace Kickstarter_web.masters {
     public partial class LoggedIn {
         
         /// <summary>
+        /// a_uitloggen control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton a_uitloggen;
+        
+        /// <summary>
         /// container_jumbo control.
         /// </summary>
         /// <remarks>

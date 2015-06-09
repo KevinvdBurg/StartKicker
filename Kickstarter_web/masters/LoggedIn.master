@@ -6,7 +6,9 @@
     <li><a href="#">Creeer project</a></li>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="navRight" runat="server">
-    <li><a href="#">Uitloggen</a></li>
+    <li>
+        <asp:LinkButton ID="a_uitloggen" runat="server" Text="Button" OnClick="a_uitloggen_Click" />
+    </li>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="jumbotron" runat="server">
     <asp:ContentPlaceHolder ID="container_jumbo" runat="server"></asp:ContentPlaceHolder>

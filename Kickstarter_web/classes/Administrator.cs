@@ -8,20 +8,11 @@ namespace Kickstarter_web
 {
     public class Administrator
     {
-        public Account Account
+        private DBLogin dblogin = new DBLogin();
+        public Account Login(string email, string password)
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public void Login()
-        {
-            throw new System.NotImplementedException();
+            Account getAccount = this.dblogin.Login(email, password);
+            return getAccount;
         }
     }
 }

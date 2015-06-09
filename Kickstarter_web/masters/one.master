@@ -12,14 +12,14 @@
         <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
             <p>
                 Email:
-                <asp:TextBox ID="tb_login_name" runat="server"></asp:TextBox>
+                <asp:TextBox ID="tb_login_email" runat="server"></asp:TextBox>
             </p>
             <p>
                 Password:
                 <asp:TextBox ID="tb_login_password" runat="server" ></asp:TextBox>
             </p>
             <p>
-                <asp:Button ID="Button1" runat="server" Text="Button" class="btn btn-default"/>
+                <asp:Button ID="btn_login" runat="server" Text="Inloggen" class="btn btn-default" OnClick="btn_login_Click"/>
             </p>
         </div>
     </li>

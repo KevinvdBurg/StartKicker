@@ -2,132 +2,78 @@
 {
     using System;
 
-    public abstract class Account
+    public class Account
     {
-        public Account()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public string Email
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public int AccountID { get; set; }
+        public string Email { get; set; }
 
         public string Phone
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         public string Password
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         public string Name
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         public string Picture
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         public string Biography
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         public string Location
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         public DateTime TimeZone
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         public string Vanity_URL
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
-        public Backing Backing
+        public Account(int accountId, string email, string phone, string password, string name, string picture, string biography, string location, DateTime timeZone, string vanityUrl)
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            AccountID = accountId;
+            Email = email;
+            Phone = phone;
+            Password = password;
+            Name = name;
+            Picture = picture;
+            Biography = biography;
+            Location = location;
+            TimeZone = timeZone;
+            Vanity_URL = vanityUrl;
         }
 
-        public DBAccount DBAccount
+        public Account(int accountId)
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            AccountID = accountId;
         }
+
+
     }
 }

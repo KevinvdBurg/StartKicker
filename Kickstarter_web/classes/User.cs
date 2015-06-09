@@ -6,11 +6,4 @@ using System.ComponentModel;
 
 namespace Kickstarter_web
 {
-    public class User : Account
-    {
-        public User()
-        {
-            throw new System.NotImplementedException();
-        }
-    }
 }

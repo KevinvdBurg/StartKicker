@@ -13,13 +13,13 @@ namespace Kickstarter_web {
     public partial class one {
         
         /// <summary>
-        /// tb_login_name control.
+        /// tb_login_email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_login_name;
+        protected global::System.Web.UI.WebControls.TextBox tb_login_email;
         
         /// <summary>
         /// tb_login_password control.
@@ -31,13 +31,13 @@ namespace Kickstarter_web {
         protected global::System.Web.UI.WebControls.TextBox tb_login_password;
         
         /// <summary>
-        /// Button1 control.
+        /// btn_login control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btn_login;
         
         /// <summary>
         /// container_jumbo control.
