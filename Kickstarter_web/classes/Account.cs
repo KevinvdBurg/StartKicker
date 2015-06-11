@@ -13,12 +13,6 @@
             set;
         }
 
-        public string Password
-        {
-            get;
-            set;
-        }
-
         public string Name
         {
             get;
@@ -43,7 +37,7 @@
             set;
         }
 
-        public DateTime TimeZone
+        public string TimeZone
         {
             get;
             set;
@@ -55,12 +49,11 @@
             set;
         }
 
-        public Account(int accountId, string email, string phone, string password, string name, string picture, string biography, string location, DateTime timeZone, string vanityUrl)
+        public Account(int accountId, string email, string phone, string name, string picture, string biography, string location, string timeZone, string vanityUrl)
         {
             AccountID = accountId;
             Email = email;
             Phone = phone;
-            Password = password;
             Name = name;
             Picture = picture;
             Biography = biography;

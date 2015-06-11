@@ -8,141 +8,39 @@ namespace Kickstarter_web
 {
     public class Project
     {
-        public Project()
-        {
-            throw new System.NotImplementedException();
-        }
+        public string Title { get; set; }
 
-        public string Title
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public string ShortBlurb { get; set; }
 
-        public string ShortBlurb
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public string ProjectLocation { get; set; }
 
-        public string ProjectLocation
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public string FundingDuration { get; set; }
 
-        public string FundingDuration
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public int FundingGoal { get; set; }
 
-        public int FundingGoal
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public string ProjectVideo { get; set; }
 
-        public string ProjectVideo
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public string ProjectDescription { get; set; }
 
-        public string ProjectDescription
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public string RisksAndChallenges { get; set; }
+        public string Category { get; set; }
+        public string SubCategory { get; set; }
 
-        public string RisksAndChallenges
+        public Project(string title, string shortBlurb, string projectLocation, string fundingDuration, int fundingGoal, string projectVideo, string projectDescription, string risksAndChallenges, string category, string subCategory)
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public DBProject DBProject
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public Rewards Rewards
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public Account Account
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public Content Content
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            Title = title;
+            ShortBlurb = shortBlurb;
+            ProjectLocation = projectLocation;
+            FundingDuration = fundingDuration;
+            FundingGoal = fundingGoal;
+            ProjectVideo = projectVideo;
+            ProjectDescription = projectDescription;
+            RisksAndChallenges = risksAndChallenges;
+            Category = category;
+            SubCategory = subCategory;  
         }
     }
 }
+
+    
+

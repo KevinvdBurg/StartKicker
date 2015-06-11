@@ -26,8 +26,8 @@ namespace Kickstarter_web
             set;
         }
 
-        public Admin(int accountId, string email, string phone, string password, string name, string picture, string biography, string location, DateTime timeZone, string vanityUrl, string workEmail, double salary, string department)
-            : base(accountId, email, phone, password, name, picture, biography, location, timeZone, vanityUrl)
+        public Admin(int accountId, string email, string phone, string name, string picture, string biography, string location, string timeZone, string vanityUrl, string workEmail, double salary, string department)
+            : base(accountId, email, phone, name, picture, biography, location, timeZone, vanityUrl)
         {
             WorkEmail = workEmail;
             Salary = salary;

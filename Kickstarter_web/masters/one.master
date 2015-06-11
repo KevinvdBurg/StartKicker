@@ -5,7 +5,7 @@
     <li><a href="#">Alle Projecten</a></li>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="navRight" runat="server">
-    <li><a href="/users/sign_up">Registreer</a></li>
+    <li><a href="/pages/sign_up.aspx">Registreer</a></li>
         <li class="divider-vertical"></li>
         <li class="dropdown">
         <a class="dropdown-toggle" href="#" data-toggle="dropdown">Inloggen<strong class="caret"></strong></a>

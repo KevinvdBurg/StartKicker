@@ -95,6 +95,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="pages\dashboard.aspx" />
+    <Content Include="pages\makeproject.aspx" />
+    <Content Include="pages\sign_up.aspx" />
     <Content Include="tile-wide.png" />
     <Content Include="tile.png" />
     <Content Include="Web.config" />
@@ -102,7 +104,9 @@
   <ItemGroup>
     <Compile Include="classes\Account.cs" />
     <Compile Include="classes\Admin.cs" />
-    <Compile Include="classes\Administrator.cs" />
+    <Compile Include="classes\Administrator.cs">
+      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+    </Compile>
     <Compile Include="classes\Backing.cs" />
     <Compile Include="classes\Category.cs" />
     <Compile Include="classes\Class1.cs" />
@@ -114,7 +118,7 @@
     <Compile Include="classes\Pages.cs" />
     <Compile Include="classes\Project.cs" />
     <Compile Include="classes\SessionKey.cs" />
-    <Compile Include="DBLogin.cs" />
+    <Compile Include="classes\DBLogin.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -149,6 +153,20 @@
     </Compile>
     <Compile Include="pages\dashboard.aspx.designer.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\makeproject.aspx.cs">
+      <DependentUpon>makeproject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\makeproject.aspx.designer.cs">
+      <DependentUpon>makeproject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\sign_up.aspx.cs">
+      <DependentUpon>sign_up.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\sign_up.aspx.designer.cs">
+      <DependentUpon>sign_up.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="classes\Rewards.cs" />

@@ -24,13 +24,12 @@ namespace Kickstarter_web
             {
                 Session[myKeys.key_accountID] = User.AccountID;
                 Session[myKeys.key_rights] = "admin";
-                Console.WriteLine("Admin");
             }
-            else
+            else if (User is Account)
             {
                 Session[myKeys.key_accountID] = User.AccountID;
-                Session[myKeys.key_rights] = "User";
-                Console.WriteLine("User");
+                Session[myKeys.key_rights] = "user";
+                Console.WriteLine("user");
             }
 
             Response.Redirect("/pages/dashboard.aspx");  

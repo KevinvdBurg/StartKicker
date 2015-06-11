@@ -3,11 +3,14 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="navLeft" runat="server">
     <li><a href="#">Mijn projecten</a></li>
-    <li><a href="#">Creeer project</a></li>
+    <li><a href="/pages/makeproject.aspx">Creeer project</a></li>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="navRight" runat="server">
     <li>
-        <asp:LinkButton ID="a_uitloggen" runat="server" Text="Button" OnClick="a_uitloggen_Click" />
+        <asp:LinkButton ID="a_log_naam" runat="server" Text=" "/>
+    </li>
+    <li>
+        <asp:LinkButton ID="a_uitloggen" runat="server" Text="Uitloggen" OnClick="a_uitloggen_Click" />
     </li>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="jumbotron" runat="server">
