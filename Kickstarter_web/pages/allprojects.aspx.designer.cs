@@ -10,24 +10,24 @@
 namespace Kickstarter_web.pages {
     
     
-    public partial class dashboard {
+    public partial class allprojects {
         
         /// <summary>
-        /// Gebruiker_ID control.
+        /// ProjectAll control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Gebruiker_ID;
+        protected global::System.Web.UI.WebControls.ObjectDataSource ProjectAll;
         
         /// <summary>
-        /// myProjects control.
+        /// Repeater_projects control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal myProjects;
+        protected global::System.Web.UI.WebControls.Repeater Repeater_projects;
     }
 }

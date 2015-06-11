@@ -10,7 +10,7 @@
                     <td>Title</td>
                     <td>
                         <asp:TextBox ID="proj_title" runat="server"></asp:TextBox>
-                        <asp:CustomValidator ID="CustomValidatorproj_title" runat="server" ControlToValidate="proj_title" ErrorMessage="CustomValidator" Display="Dynamic" OnServerValidate="CustomValidatorproj_title_OnServerValidate" ShowSummary="true"></asp:CustomValidator>
+                        <asp:CustomValidator ID="CustomValidatorproj_title" runat="server" ControlToValidate="proj_title" ValidateEmptyText="true" ErrorMessage="CustomValidator" Display="Dynamic" OnServerValidate="CustomValidatorproj_title_OnServerValidate" ShowSummary="true"></asp:CustomValidator>
                     </td>
                 </tr>
                 <tr>

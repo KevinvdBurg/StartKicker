@@ -7,7 +7,7 @@ using Oracle.DataAccess.Client;
 
 namespace Kickstarter_web
 {
-    
+    using System.Collections.Generic;
 
     public class DBProject : Database
     {
@@ -56,6 +56,128 @@ namespace Kickstarter_web
         public void Update()
         {
             throw new System.NotImplementedException();
+        }
+
+        public List<Project> GetAllProjects()
+        {
+            string sql = "SELECT TITLE,SHORTBLURB, CATEGORY_ID, SUBCATEGORY_ID, PROJECT_LOCATION, FUNDING_DURATION, FUNDING_GOAL, PROJECTVIDEO, PROJECTDESCRIPTION, RISKSANDCHALLENGES, PROJECT_ID FROM KICKSTARTER_PROJECT";
+            List<Project> listProjects = new List<Project>();
+            
+            try
+            {
+                this.Connect();
+                OracleCommand cmd = new OracleCommand(sql, this.connection);
+                OracleDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        Project tempProject = new Project(
+                            Convert.ToString(reader["TITLE"]), 
+                            Convert.ToString(reader["SHORTBLURB"]), 
+                            Convert.ToString(reader["PROJECT_LOCATION"]),
+                            Convert.ToString(reader["FUNDING_DURATION"]),
+                            Convert.ToInt32(reader["FUNDING_GOAL"]),
+                            Convert.ToString(reader["PROJECTVIDEO"]),
+                            Convert.ToString(reader["PROJECTDESCRIPTION"]),
+                            Convert.ToString(reader["RISKSANDCHALLENGES"]),
+                            Convert.ToString(reader["CATEGORY_ID"]), 
+                            Convert.ToString(reader["SUBCATEGORY_ID"]),
+                            Convert.ToInt32(reader["PROJECT_ID"]));
+                        listProjects.Add(tempProject);
+                    }
+                }
+            }
+            catch (OracleException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                this.connection.Close();
+            }
+
+            return listProjects;
+        }
+
+        public List<Project> GetAllProjectsFromAccount(int accountID)
+        {
+            string sql = "SELECT TITLE,SHORTBLURB, CATEGORY_ID, SUBCATEGORY_ID, PROJECT_LOCATION, FUNDING_DURATION, FUNDING_GOAL, PROJECTVIDEO, PROJECTDESCRIPTION, RISKSANDCHALLENGES, PROJECT_ID FROM KICKSTARTER_PROJECT WHERE ACCOUNT_ID = :accountID";
+            List<Project> listProjects = new List<Project>();
+
+            try
+            {
+                this.Connect();
+                OracleCommand cmd = new OracleCommand(sql, this.connection);
+                cmd.Parameters.Add(new OracleParameter("accountID", accountID));
+                OracleDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        Project tempProject = new Project(
+                            Convert.ToString(reader["TITLE"]),
+                            Convert.ToString(reader["SHORTBLURB"]),
+                            Convert.ToString(reader["PROJECT_LOCATION"]),
+                            Convert.ToString(reader["FUNDING_DURATION"]),
+                            Convert.ToInt32(reader["FUNDING_GOAL"]),
+                            Convert.ToString(reader["PROJECTVIDEO"]),
+                            Convert.ToString(reader["PROJECTDESCRIPTION"]),
+                            Convert.ToString(reader["RISKSANDCHALLENGES"]),
+                            Convert.ToString(reader["CATEGORY_ID"]),
+                            Convert.ToString(reader["SUBCATEGORY_ID"]),
+                            Convert.ToInt32(reader["PROJECT_ID"]));
+                        listProjects.Add(tempProject);
+                    }
+                }
+            }
+            catch (OracleException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                this.connection.Close();
+            }
+            return listProjects;
+        }
+
+        public Project GetProject(int projectID)
+        {
+            string sql = "SELECT TITLE,SHORTBLURB, CATEGORY_ID, SUBCATEGORY_ID, PROJECT_LOCATION, FUNDING_DURATION, FUNDING_GOAL, PROJECTVIDEO, PROJECTDESCRIPTION, RISKSANDCHALLENGES, PROJECT_ID FROM KICKSTARTER_PROJECT WHERE PROJECT_ID = :projectID";
+            Project thisProjects = new Project();
+            try
+            {
+                this.Connect();
+                OracleCommand cmd = new OracleCommand(sql, this.connection);
+                cmd.Parameters.Add(new OracleParameter("projectID", projectID));
+                OracleDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                        Project tempProject = new Project(
+                            Convert.ToString(reader["TITLE"]),
+                            Convert.ToString(reader["SHORTBLURB"]),
+                            Convert.ToString(reader["PROJECT_LOCATION"]),
+                            Convert.ToString(reader["FUNDING_DURATION"]),
+                            Convert.ToInt32(reader["FUNDING_GOAL"]),
+                            Convert.ToString(reader["PROJECTVIDEO"]),
+                            Convert.ToString(reader["PROJECTDESCRIPTION"]),
+                            Convert.ToString(reader["RISKSANDCHALLENGES"]),
+                            Convert.ToString(reader["CATEGORY_ID"]),
+                            Convert.ToString(reader["SUBCATEGORY_ID"]),
+                            Convert.ToInt32(reader["PROJECT_ID"]));
+                    thisProjects = tempProject;
+                }
+            }
+            catch (OracleException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                this.connection.Close();
+            }
+            return thisProjects;
         }
     }
 }

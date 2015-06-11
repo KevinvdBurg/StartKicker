@@ -6,6 +6,8 @@ using System.ComponentModel;
 
 namespace Kickstarter_web
 {
+    using System.CodeDom;
+
     public class Project
     {
         public string Title { get; set; }
@@ -25,8 +27,9 @@ namespace Kickstarter_web
         public string RisksAndChallenges { get; set; }
         public string Category { get; set; }
         public string SubCategory { get; set; }
+        public string ProjectID { get; set; }
 
-        public Project(string title, string shortBlurb, string projectLocation, string fundingDuration, int fundingGoal, string projectVideo, string projectDescription, string risksAndChallenges, string category, string subCategory)
+        public Project(string title, string shortBlurb, string projectLocation, string fundingDuration, int fundingGoal, string projectVideo, string projectDescription, string risksAndChallenges, string category, string subCategory, int projectID)
         {
             Title = title;
             ShortBlurb = shortBlurb;
@@ -37,10 +40,15 @@ namespace Kickstarter_web
             ProjectDescription = projectDescription;
             RisksAndChallenges = risksAndChallenges;
             Category = category;
-            SubCategory = subCategory;  
+            SubCategory = subCategory;
+            ProjectID = ProjectID;
+        }
+
+        public Project()
+        {
+            
         }
     }
 }
 
-    
 

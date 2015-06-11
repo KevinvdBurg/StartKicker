@@ -6,6 +6,7 @@ using System.ComponentModel;
 
 namespace Kickstarter_web
 {
+    using System.Collections.Generic;
     using System.Drawing;
 
     public class Administrator
@@ -35,5 +36,25 @@ namespace Kickstarter_web
         {
             return this.dbProject.Insert(project, accountID);
         }
+
+        public List<Project> GetallProject()
+        {
+
+            return this.dbProject.GetAllProjects();
+        }
+
+        public List<Project> GetallFromAccountProjects(int accountID)
+        {
+
+            return this.dbProject.GetAllProjectsFromAccount(accountID);
+        }
+
+        public Project GetProjects(int projectID)
+        {
+
+            return this.dbProject.GetProject(projectID);
+        }
     }
+
+    
 }

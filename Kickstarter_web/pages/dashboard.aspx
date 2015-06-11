@@ -3,4 +3,5 @@
     <asp:Label ID="Gebruiker_ID" runat="server" Text="Label"></asp:Label>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="container_bottom" runat="server">
+    <asp:Literal ID="myProjects" runat="server"></asp:Literal>
 </asp:Content>

@@ -18,18 +18,21 @@ namespace Kickstarter_web.pages
 
         protected void proj_button_Click(object sender, EventArgs e)
         {
-            Project newProject = new Project(proj_title.Text,proj_blurb.Text,proj_location.Text,proj_funding_duration.Text,Convert.ToInt32(proj_funding_goal.Text),proj_video.Text,proj_disc.Text,proj_riskcha.Text, proj_category.Text, proj_subcategory.Text);
-
-            if (administrator.CreeerProject(newProject, Convert.ToInt32(Session[myKeys.key_accountID])))
+            if (Page.IsValid)
             {
-                
+                Project newProject = new Project(proj_title.Text, proj_blurb.Text, proj_location.Text, proj_funding_duration.Text, Convert.ToInt32(proj_funding_goal.Text), proj_video.Text, proj_disc.Text, proj_riskcha.Text, proj_category.Text, proj_subcategory.Text, 0);
+
+                if (administrator.CreeerProject(newProject, Convert.ToInt32(Session[myKeys.key_accountID])))
+                {
+                    MessageBox.Show(this, "Project is aangemaakt");
+                }
             }
         }
 
         protected void CustomValidatorproj_title_OnServerValidate(object source, ServerValidateEventArgs args)
         {
             Console.WriteLine("In Validator?");
-
+           
             if (proj_title.Text.Length > 0)
             {
                 args.IsValid = true;
