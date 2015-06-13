@@ -10,11 +10,13 @@ namespace Kickstarter_web.pages
     
     public partial class dashboard : Page
     {
-        DBProject dbProject = new DBProject();
+        private Account currentAccount;
+        Administrator administrator = new Administrator();
         protected void Page_Load(object sender, EventArgs e)
         {
-            Gebruiker_ID.Text = "Welkom Gebruiker:" + Session["accountID"] + " - " + Session["rights"];
-
+            
+            var currentAccount = administrator.getAccountDetails((int)this.Session[myKeys.key_accountID], (string)this.Session[myKeys.key_rights]);
+            Gebruiker_ID.Text = "<h2>" + currentAccount.Name +"</h2>";
             //string projectString = null;
 
             //foreach (Project project in dbProject.GetAllProjectsFromAccount(Convert.ToInt32(Session["accountID"])))
@@ -34,7 +36,5 @@ namespace Kickstarter_web.pages
 
             //myProjects.Text = projectString;
         }
-
-
     }
 }

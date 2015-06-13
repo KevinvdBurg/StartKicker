@@ -10,8 +10,7 @@ namespace Kickstarter_web.masters
 {
     public partial class LoggedIn : System.Web.UI.MasterPage
     {
-        private Account currentAccount;
-        Administrator administrator = new Administrator();
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -24,8 +23,9 @@ namespace Kickstarter_web.masters
             }
             else
             {
-                currentAccount = administrator.getAccountDetails((int)Session[myKeys.key_accountID], (string)Session[myKeys.key_rights]);
-                a_log_naam.Text = "Welkom: " + currentAccount.Name + " - " + Session[myKeys.key_rights];
+                
+                a_log_naam.Text = "Dashboard";
+                //a_log_naam.Text = "Welkom: " + currentAccount.Name + " - " + Session[myKeys.key_rights];
             }
         }
 

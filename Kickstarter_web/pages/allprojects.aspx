@@ -2,7 +2,7 @@
 <%@ Import Namespace="Kickstarter_web.classes" %>
 <%@ Import Namespace="Kickstarter_web" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="container_jumbo" runat="server">
-    <h2>Alle Projecten</h2>
+    <h2>All Projecten</h2>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="container_bottom" runat="server">     

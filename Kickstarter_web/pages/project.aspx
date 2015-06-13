@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masters/one.master" AutoEventWireup="true" CodeBehind="project.aspx.cs" Inherits="Kickstarter_web.pages.project" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="container_jumbo" runat="server">
+    <h2>Project Info</h2>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="container_bottom" runat="server">
     
@@ -28,8 +30,8 @@
                      <tr><td>RisksAndChallenges</td><td><%# Eval("RisksAndChallenges") %></td></tr> 
                       <tr><td>Location</td><td><%# Eval("ProjectLocation") %></td></tr>         
                      <tr><td>
-                         <asp:Button ID='BackNow' runat="server" Text="BackNow"  ViewStateMode="Enabled" /></td><td>
-                         <asp:TextBox ID="BackValue" runat="server"></asp:TextBox>
+                         <asp:Button ID="BackNow" runat="server" Text="BackNow"  ViewStateMode="Enabled" OnClick="backProject" EnableViewState="true" /></td><td>
+                         <asp:TextBox ID="BackValue" runat="server" EnableViewState="true"></asp:TextBox>
                       </table>
                   </div>
         </ItemTemplate>

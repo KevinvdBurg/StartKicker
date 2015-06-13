@@ -8,53 +8,13 @@ namespace Kickstarter_web
 {
     public class Backing
     {
-        public Backing()
-        {
-            throw new System.NotImplementedException();
-        }
+        public double PledgeAmount { get; set; }
 
-        public double PledgeAmount
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public bool Betaald { get; set; }
 
-        public bool Betaald
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public  int ProjectID { get; set; }
 
-        public DBBacking DBBacking
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public int AccountID { get; set; }
 
-        public Project Project
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
     }
 }
