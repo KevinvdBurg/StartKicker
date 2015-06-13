@@ -15,7 +15,6 @@ namespace Kickstarter_web.masters
         protected void Page_Load(object sender, EventArgs e)
         {
             string value = Session[myKeys.key_accountID] + "";
-            Console.WriteLine(value);
 
             if (String.IsNullOrEmpty(value))
             {

@@ -279,5 +279,34 @@ namespace Kickstarter_web
             }
             return result;
         }
+
+        public bool BackProject(string projectId, int accountId, int backamount)
+        {
+            bool resultaat = false;
+
+            string sql =
+                "INSERT INTO KICKSTARTER_BACKING(ACCOUNT_ID,PROJECT_ID,PLEDGEAMOUNT) VALUES(ACCOUNT_ID = :accountId,PROJECT_ID = :projectId, PLEDGEAMOUNT = :backamount)";
+            try
+            {
+                this.Connect();
+                OracleCommand cmd = new OracleCommand(sql, this.connection);
+                cmd.Parameters.Add(new OracleParameter("ACCOUNT_ID", accountId));
+                cmd.Parameters.Add(new OracleParameter("PROJECT_ID", projectId));
+                cmd.Parameters.Add(new OracleParameter("PLEDGEAMOUNT", backamount));
+                cmd.ExecuteNonQuery();
+                resultaat = true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                throw;
+            }
+            finally
+            {
+                this.connection.Close();
+            }
+
+            return resultaat;
+        }
     }
 }

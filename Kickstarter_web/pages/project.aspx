@@ -31,7 +31,7 @@
                       <tr><td>Location</td><td><%# Eval("ProjectLocation") %></td></tr>         
                      <tr><td>
                          <asp:Button ID="BackNow" runat="server" Text="BackNow"  ViewStateMode="Enabled" OnClick="backProject" EnableViewState="true" /></td><td>
-                         <asp:TextBox ID="BackValue" runat="server" EnableViewState="true"></asp:TextBox>
+                         <asp:TextBox ID="BackValue" runat="server" EnableViewState="true" TextMode="Number"></asp:TextBox>
                       </table>
                   </div>
         </ItemTemplate>

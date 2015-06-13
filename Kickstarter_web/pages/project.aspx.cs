@@ -11,6 +11,7 @@ namespace Kickstarter_web.pages
 
     public partial class project : System.Web.UI.Page
     {
+        Administrator administrator = new Administrator();
         protected void Page_Load(object sender, EventArgs e)
         {
             string id = Request["projectID"];
@@ -18,23 +19,38 @@ namespace Kickstarter_web.pages
 
         protected void backProject(object sender, EventArgs e)
         {
-            string id = Request["projectID"];
+            
+            string projectID = Request["projectID"];
             int accountID = Convert.ToInt32(Session[myKeys.key_accountID]);
             int backamount = 0;
-            
-            foreach (RepeaterItem item in Repeater_aproject.Items)
+
+            string value = Session[myKeys.key_accountID] + "";
+
+            if (String.IsNullOrEmpty(value))
             {
-                TextBox txtName = (TextBox)item.FindControl("BackValue");
-                if (txtName != null)
+                MessageBox.Show(this, "Log eerst in voordat u een Project Backed");
+            }
+            else
+            {
+                foreach (RepeaterItem item in Repeater_aproject.Items)
                 {
-                    backamount = Convert.ToInt32(txtName.Text);
-                    MessageBox.Show(this, id + "   " + accountID + "  " + backamount);
-                }
-                else
-                {
-                    MessageBox.Show(this,"Plegde Amount can't be 0");
-                }
-            }    
+                    TextBox txtName = (TextBox)item.FindControl("BackValue");
+                    if (txtName != null)
+                    {
+                        backamount = Convert.ToInt32(txtName.Text);
+                        MessageBox.Show(this, projectID + "   " + accountID + "  " + backamount);
+                        this.administrator.BackProject(projectID, accountID, backamount);
+                    }
+
+                    else
+                    {
+                        MessageBox.Show(this,"Plegde Amount can't be 0");
+                    }
+                }   
+            }
+             
         }
+
+
     }
 }
