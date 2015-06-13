@@ -16,7 +16,7 @@
                  <div>
                      <h2><%# Eval("Title") %></h2>
                      <table class="table">
-                     <tr><td width="30%">ShortBlurb</td><%# Eval("ShortBlurb") %><td width="70%"></td></tr>          
+                     <tr><td width="30%">ShortBlurb</td><td width="70%"><%# Eval("ShortBlurb") %></td></tr>          
                      <tr><td>ProjectDescription</td><td><%# Eval("ProjectDescription") %></td></tr>         
                      <tr><td>FundingDuration</td><td><%# Eval("FundingDuration") %></td></tr>        
                      <tr><td>FundingGoal</td><td><%# Eval("FundingGoal") %></td></tr>          

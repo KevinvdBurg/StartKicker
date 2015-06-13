@@ -28,6 +28,15 @@ namespace Kickstarter_web.pages {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal myProjects;
+        protected global::System.Web.UI.WebControls.ObjectDataSource myProjects;
+        
+        /// <summary>
+        /// Repeater_projects control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater Repeater_projects;
     }
 }
