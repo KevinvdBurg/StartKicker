@@ -18,7 +18,7 @@ namespace Kickstarter_web
             throw new System.NotImplementedException();
         }
 
-        public bool Insert(Rewards reward, int projectID, int prevReward)
+        public bool Insert(Rewards reward, int projectID)
         {
             string sql = "INSERT INTO KICKSTARTER_REWARDS (PROJECT_ID, KICKNAME, PRICE, DESCRIPTION, ESTIMATEDDELIVERY, SHIPPINGDETAILS, PREVREWARD_ID) VALUES(:projectID, :kickname, :price ,:description, :esti,:shipdetails, :prevrewardID)";
             bool resultaat = false;
@@ -32,7 +32,7 @@ namespace Kickstarter_web
                 cmd.Parameters.Add(new OracleParameter("description", reward.Description));
                 cmd.Parameters.Add(new OracleParameter("esti", reward.Delivery));
                 cmd.Parameters.Add(new OracleParameter("shipdetails", reward.Delivery));
-                cmd.Parameters.Add(new OracleParameter("prevrewardID", prevReward));
+                cmd.Parameters.Add(new OracleParameter("prevrewardID", reward.PrevReward));
                 cmd.ExecuteNonQuery();
                 resultaat = true;
             }

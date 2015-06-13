@@ -13,138 +13,66 @@ namespace Kickstarter_web.pages {
     public partial class addReward {
         
         /// <summary>
-        /// proj_title control.
+        /// rew_name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox proj_title;
+        protected global::System.Web.UI.WebControls.TextBox rew_name;
         
         /// <summary>
-        /// CustomValidatorproj_title control.
+        /// rew_price control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator CustomValidatorproj_title;
+        protected global::System.Web.UI.WebControls.TextBox rew_price;
         
         /// <summary>
-        /// proj_blurb control.
+        /// rew_decr control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox proj_blurb;
+        protected global::System.Web.UI.WebControls.TextBox rew_decr;
         
         /// <summary>
-        /// objDataCat control.
+        /// rew_ship control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource objDataCat;
+        protected global::System.Web.UI.WebControls.TextBox rew_ship;
         
         /// <summary>
-        /// proj_category control.
+        /// rew_prevreward control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList proj_category;
+        protected global::System.Web.UI.WebControls.DropDownList rew_prevreward;
         
         /// <summary>
-        /// objDataSubCat control.
+        /// Rewards control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource objDataSubCat;
+        protected global::System.Web.UI.WebControls.ObjectDataSource Rewards;
         
         /// <summary>
-        /// proj_subcategory control.
+        /// rew_button control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList proj_subcategory;
-        
-        /// <summary>
-        /// proj_location control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox proj_location;
-        
-        /// <summary>
-        /// proj_funding_duration control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox proj_funding_duration;
-        
-        /// <summary>
-        /// proj_funding_goal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox proj_funding_goal;
-        
-        /// <summary>
-        /// proj_video control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox proj_video;
-        
-        /// <summary>
-        /// proj_disc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox proj_disc;
-        
-        /// <summary>
-        /// proj_riskcha control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox proj_riskcha;
-        
-        /// <summary>
-        /// proj_button control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button proj_button;
-        
-        /// <summary>
-        /// CustomValidator1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator1;
+        protected global::System.Web.UI.WebControls.Button rew_button;
     }
 }

@@ -14,6 +14,7 @@ namespace Kickstarter_web
         private DBLogin dblogin = new DBLogin();
         private DBAccount dbAccount = new DBAccount();
         private DBProject dbProject = new DBProject();
+        private DBReward dbReward = new DBReward();
 
         public Account Login(string email, string password)
         {
@@ -74,6 +75,21 @@ namespace Kickstarter_web
         public List<Backing> GetMyBackings(int accountID)
         {
             return this.dbProject.MyBackings(accountID);
-        } 
+        }
+
+        public Rewards GetReward(int rewardID)
+        {
+            return this.dbReward.GetReward(rewardID);
+        }
+
+        public List<Rewards> GetAllRewards(int projectID)
+        {
+            return this.dbReward.GetAllRewardsPerProject(projectID);
+        }
+
+        public bool InsertReward(Rewards reward, int projectID)
+        {
+            return this.dbReward.Insert(reward, projectID);
+        }
     }    
 }

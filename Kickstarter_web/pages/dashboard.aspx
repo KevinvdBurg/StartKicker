@@ -30,7 +30,11 @@
                      <tr><td>Category</td><td><%# Eval("Category.Name") %></td></tr>  
                      <!--tr><td>SubCategory</td><td><%# Eval("SubCategory") %></td></tr-->    
                      <tr><td>RisksAndChallenges</td><td><%# Eval("RisksAndChallenges") %></td></tr> 
-                     <tr><td>Location</td><td><%# Eval("ProjectLocation") %></td></tr>         
+                     <tr><td>Location</td><td><%# Eval("ProjectLocation") %></td></tr>
+                         <tr>
+                             <td><asp:Button ID='AddReward' runat="server" Text="Add Reward"  ViewStateMode="Enabled" PostBackUrl='<%# "/pages/addreward.aspx?projectID="+Eval("ProjectID") %>'/></td>
+                             <td><asp:Button ID='BackProject' runat="server" Text="ProductPage"  ViewStateMode="Enabled" PostBackUrl='<%# "/pages/project.aspx?projectID="+Eval("ProjectID") %>'/></td>
+                         </tr>        
                       </table>
                   </div>
         </ItemTemplate>

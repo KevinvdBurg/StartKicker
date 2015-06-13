@@ -95,6 +95,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="pages\addreward.aspx" />
     <Content Include="pages\allprojects.aspx" />
     <Content Include="pages\dashboard.aspx" />
     <Content Include="pages\makeproject.aspx" />
@@ -150,6 +151,13 @@
     </Compile>
     <Compile Include="masters\one.master.designer.cs">
       <DependentUpon>one.master</DependentUpon>
+    </Compile>
+    <Compile Include="pages\addreward.aspx.cs">
+      <DependentUpon>addreward.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\addreward.aspx.designer.cs">
+      <DependentUpon>addreward.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\allprojects.aspx.cs">
       <DependentUpon>allprojects.aspx</DependentUpon>

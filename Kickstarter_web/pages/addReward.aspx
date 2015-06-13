@@ -6,79 +6,52 @@
         <div class="col-md-8">
             <table class="table">
                 <tr>
-                    <td>Title</td>
+                    <td>Reward Name</td>
                     <td>
-                        <asp:TextBox ID="proj_title" runat="server"></asp:TextBox>
-                        <asp:CustomValidator ID="CustomValidatorproj_title" runat="server" ControlToValidate="proj_title" ValidateEmptyText="true" ErrorMessage="CustomValidator" Display="Dynamic" OnServerValidate="CustomValidatorproj_title_OnServerValidate" ShowSummary="true"></asp:CustomValidator>
+                        <asp:TextBox ID="rew_name" runat="server"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
-                    <td>Short Blurb</td>
+                    <td>Price</td>
                     <td>
-                        <asp:TextBox ID="proj_blurb" runat="server" MaxLength="150" TextMode="MultiLine"></asp:TextBox>
+                        <asp:TextBox ID="rew_price" runat="server"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
-                    <td>Category</td>
+                    <td>Description</td>
                     <td>
-                        <asp:ObjectDataSource ID="objDataCat" runat="server"  SelectMethod="GetCategories" TypeName="Kickstarter_web.Administrator" ></asp:ObjectDataSource>
-                        <asp:DropDownList ID="proj_category" runat="server" DataSourceID="objDataCat" DataTextField="Name" DataValueField="ID"></asp:DropDownList>
-                    </td>
-                </tr>
-                <!--tr>
-                    <td>Sub Category</td>
-                    <td>
-                        <asp:ObjectDataSource ID="objDataSubCat" runat="server"  SelectMethod="GetSubCategories" TypeName="Kickstarter_web.Administrator"></asp:ObjectDataSource>
-                        <asp:DropDownList ID="proj_subcategory" runat="server" DataSourceID="objDataSubCat" DataTextField="Name" DataValueField="ID"></asp:DropDownList>
-                    </td>
-                </tr-->
-                <tr>
-                    <td>Location</td>
-                    <td>
-                        <asp:TextBox ID="proj_location" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="rew_decr" runat="server"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
-                    <td>Funding Duration</td>
+                    <td>Shipping Details</td>
                     <td>
-                        <asp:TextBox ID="proj_funding_duration" runat="server" TextMode="Number"></asp:TextBox>
+                        <asp:TextBox ID="rew_ship" runat="server"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
-                    <td>Funding Goal</td>
+                    <td>Prev Reward</td>
                     <td>
-                        <asp:TextBox ID="proj_funding_goal" runat="server" TextMode="Number"></asp:TextBox>
+                        <asp:DropDownList ID="rew_prevreward" runat="server" DataSourceID="Rewards" DataTextField="Name" DataValueField="PrevReward"></asp:DropDownList>
+                        <asp:ObjectDataSource ID="Rewards" runat="server" SelectMethod="GetAllRewards" TypeName="Kickstarter_web.Administrator">
+                            <SelectParameters>
+                                <asp:QueryStringParameter Name="projectID" QueryStringField="projectID" Type="Int32" />
+                            </SelectParameters>
+                        </asp:ObjectDataSource>
                     </td>
                 </tr>
-                <tr>
-                    <td>Video</td>
-                    <td>
-                        <asp:TextBox ID="proj_video" runat="server"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Discription</td>
-                    <td>
-                        <asp:TextBox ID="proj_disc" runat="server"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Risks and Chalenges</td>
-                    <td>
-                        <asp:TextBox ID="proj_riskcha" runat="server"></asp:TextBox>
-                    </td>
-                </tr>
+                
                 <tr>
                     <td></td>
                     <td>
-                        <asp:Button ID="proj_button" runat="server" Text="Button" OnClick="proj_button_Click" />
+                        <asp:Button ID="rew_button" runat="server" Text="Button" OnClick="rew_button_Click" />
                     </td>
                 </tr>
 
             </table>
         </div>
         <div class="col-md-4">
-            <asp:CustomValidator ID="CustomValidator1" runat="server" ControlToValidate="proj_title" ValidateEmptyText="true" ErrorMessage="CustomValidator" Display="Dynamic" OnServerValidate="CustomValidatorproj_title_OnServerValidate" ShowSummary="true"></asp:CustomValidator>
+            
         </div>
       </div>
 </asp:Content>
