@@ -1,19 +1,21 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masters/one.master" AutoEventWireup="true" CodeBehind="allprojects.aspx.cs" Inherits="Kickstarter_web.pages.allprojects" %>
-<%@ Import Namespace="Kickstarter_web.classes" %>
-<%@ Import Namespace="Kickstarter_web" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masters/one.master" AutoEventWireup="true" CodeBehind="project.aspx.cs" Inherits="Kickstarter_web.pages.project" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="container_jumbo" runat="server">
-    <h2>Alle Projecten</h2>
 </asp:Content>
-
-<asp:Content ID="Content2" ContentPlaceHolderID="container_bottom" runat="server">     
-    <asp:ObjectDataSource ID="ProjectAll" runat="server" SelectMethod="GetallProject" TypeName="Kickstarter_web.Administrator"></asp:ObjectDataSource>
+<asp:Content ID="Content2" ContentPlaceHolderID="container_bottom" runat="server">
     
-    <asp:Repeater ID="Repeater_projects" runat="server" DataSourceID="ProjectAll" OnItemCommand="Repeater_projects_ItemCommand"  >
+    <asp:ObjectDataSource ID="aProject" runat="server" SelectMethod="GetProject" TypeName="Kickstarter_web.Administrator">
+        <SelectParameters>
+                <asp:QueryStringParameter  QueryStringField="projectID" Name="projectID" Type="Int32" />
+            </SelectParameters>
+    </asp:ObjectDataSource>
+    
+    <asp:Repeater ID="Repeater_aproject" runat="server" DataSourceID="aProject" >
         <SeparatorTemplate>
              <hr/>
         </SeparatorTemplate>
         <ItemTemplate>
                  <div>
+                     <asp:HiddenField ID="BackProject" runat="server" Value=<%# Eval("ProjectID") %>/>
                      <h2><%# Eval("Title") %></h2>
                      <table class="table">
                      <tr><td width="30%">ShortBlurb</td><td width="70%"><%# Eval("ShortBlurb") %></td></tr>          
@@ -26,7 +28,8 @@
                      <tr><td>RisksAndChallenges</td><td><%# Eval("RisksAndChallenges") %></td></tr> 
                       <tr><td>Location</td><td><%# Eval("ProjectLocation") %></td></tr>         
                      <tr><td>
-                         <asp:Button ID='BackProject' runat="server" Text="More Info"  ViewStateMode="Enabled" PostBackUrl='<%# "/pages/project.aspx?projectID="+Eval("ProjectID") %>'/></td><td>
+                         <asp:Button ID='BackNow' runat="server" Text="BackNow"  ViewStateMode="Enabled" /></td><td>
+                         <asp:TextBox ID="BackValue" runat="server"></asp:TextBox>
                       </table>
                   </div>
         </ItemTemplate>

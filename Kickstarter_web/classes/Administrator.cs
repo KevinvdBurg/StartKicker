@@ -49,7 +49,7 @@ namespace Kickstarter_web
             return this.dbProject.GetAllProjectsFromAccount(accountID);
         }
 
-        public Project GetProjects(int projectID)
+        public Project GetProject(int projectID)
         {
 
             return this.dbProject.GetProject(projectID);

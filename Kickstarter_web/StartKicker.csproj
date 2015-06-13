@@ -99,6 +99,7 @@
     <Content Include="pages\backing.aspx" />
     <Content Include="pages\dashboard.aspx" />
     <Content Include="pages\makeproject.aspx" />
+    <Content Include="pages\project.aspx" />
     <Content Include="pages\sign_up.aspx" />
     <Content Include="tile-wide.png" />
     <Content Include="tile.png" />
@@ -177,6 +178,13 @@
     </Compile>
     <Compile Include="pages\makeproject.aspx.designer.cs">
       <DependentUpon>makeproject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\project.aspx.cs">
+      <DependentUpon>project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\project.aspx.designer.cs">
+      <DependentUpon>project.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\sign_up.aspx.cs">
       <DependentUpon>sign_up.aspx</DependentUpon>
