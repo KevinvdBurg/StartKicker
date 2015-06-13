@@ -8,13 +8,21 @@ namespace Kickstarter_web
 {
     public class Backing
     {
-        public double PledgeAmount { get; set; }
+        public int PledgeAmount { get; set; }
 
         public bool Betaald { get; set; }
 
-        public  int ProjectID { get; set; }
+        public Project ProjectID { get; set; }
 
         public int AccountID { get; set; }
+
+        public Backing(int pledgeAmount, bool betaald, Project projectId, int accountId)
+        {
+            PledgeAmount = pledgeAmount;
+            Betaald = betaald;
+            ProjectID = projectId;
+            AccountID = accountId;  
+        }
 
     }
 }

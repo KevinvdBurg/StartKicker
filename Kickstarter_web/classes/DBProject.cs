@@ -305,8 +305,44 @@ namespace Kickstarter_web
             {
                 this.connection.Close();
             }
-
             return resultaat;
+        }
+
+        public List<Backing> MyBackings(int accountId)
+        {
+            string sql = "SELECT PROJECT_ID, PLEDGEAMOUNT, BETAALD FROM KICKSTARTER_BACKING WHERE ACCOUNT_ID = :accountId";
+            List<Backing> myBackings = null;
+            try
+            {
+                this.Connect();
+                OracleCommand cmd = new OracleCommand(sql, this.connection);
+                cmd.Parameters.Add(new OracleParameter("accountId", accountId));
+                OracleDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    bool betaald;
+                    int btld = Convert.ToInt32(reader["BETAALD"]);
+                    if (btld == 1)
+                    {
+                        betaald = true;
+                    }
+                    else
+                    {
+                        betaald = false;
+                    }
+                    Backing myBacking = new Backing(Convert.ToInt32(reader["PLEDGEAMOUNT"]), betaald, GetProject(Convert.ToInt32(reader["PROJECT_ID"])), accountId);
+                    myBackings.Add(myBacking);
+                }
+            }
+            catch (OracleException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                this.connection.Close();
+            }
+            return myBackings;
         }
     }
 }
