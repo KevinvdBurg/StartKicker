@@ -13,7 +13,17 @@ namespace Kickstarter_web
         Administrator administrator = new Administrator();
         protected void Page_Load(object sender, EventArgs e)
         {
+            string value = Session[myKeys.key_accountID] + "";
+            Console.WriteLine(value);
 
+            if (String.IsNullOrEmpty(value))
+            {
+                //LogOut();
+            }
+            else
+            {
+                menuOpties.InnerHtml = "<li><a href=\"/pages/dashboard.aspx\">Dashboard</a></li>";
+            }
         }
 
         protected void btn_login_Click(object sender, EventArgs e)
@@ -33,6 +43,13 @@ namespace Kickstarter_web
             }
 
             Response.Redirect("/pages/dashboard.aspx");  
+        }
+
+        protected void LogOut()
+        {
+            Session.Clear();
+            Session.Abandon();
+            Response.Redirect("/index.aspx");
         }
     }
 }

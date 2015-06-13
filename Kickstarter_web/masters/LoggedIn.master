@@ -7,7 +7,7 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="navRight" runat="server">
     <li>
-        <asp:LinkButton ID="a_log_naam" runat="server" Text=" "/>
+        <asp:LinkButton ID="a_log_naam" runat="server" Text="" OnClick="a_to_dashboard"/>
     </li>
     <li>
         <asp:LinkButton ID="a_uitloggen" runat="server" Text="Uitloggen" OnClick="a_uitloggen_Click" />

@@ -13,6 +13,24 @@ namespace Kickstarter_web {
     public partial class one {
         
         /// <summary>
+        /// ltr_options control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltr_options;
+        
+        /// <summary>
+        /// menuOpties control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl menuOpties;
+        
+        /// <summary>
         /// tb_login_email control.
         /// </summary>
         /// <remarks>

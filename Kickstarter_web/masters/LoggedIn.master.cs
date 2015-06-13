@@ -39,6 +39,11 @@ namespace Kickstarter_web.masters
             Session.Clear();
             Session.Abandon();
             Response.Redirect("/index.aspx");
-        }        
+        }
+
+        protected void a_to_dashboard(object sender, EventArgs e)
+        {
+            Response.Redirect("/pages/dashboard.aspx");
+        }
     }
 }
