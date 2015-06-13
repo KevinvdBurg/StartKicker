@@ -34,15 +34,20 @@ namespace Kickstarter_web
             {
                 Session[myKeys.key_accountID] = User.AccountID;
                 Session[myKeys.key_rights] = "admin";
+                Response.Redirect("/pages/dashboard.aspx");  
             }
             else if (User is Account)
             {
                 Session[myKeys.key_accountID] = User.AccountID;
                 Session[myKeys.key_rights] = "user";
                 Console.WriteLine("user");
+                Response.Redirect("/pages/dashboard.aspx");  
             }
-
-            Response.Redirect("/pages/dashboard.aspx");  
+            else
+            {
+                error_login.Text = "<div class=\"alert alert-danger\" role=\"alert\"><span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span><span class=\"sr-only\">Error:</span>Gegevens zijn niet Correct</div>";
+                //Response.Redirect("/index.aspx"); 
+            }
         }
 
         protected void LogOut()

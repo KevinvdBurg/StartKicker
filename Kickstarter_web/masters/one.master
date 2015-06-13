@@ -23,6 +23,8 @@
             <p>
                 <asp:Button ID="btn_login" runat="server" Text="Inloggen" class="btn btn-default" OnClick="btn_login_Click"/>
             </p>
+            <asp:Literal ID="error_login" runat="server" ></asp:Literal>
+           
         </div>
     </li>
     </span>

@@ -14,9 +14,10 @@ namespace Kickstarter_web.pages
         Administrator administrator = new Administrator();
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
             var currentAccount = administrator.getAccountDetails((int)this.Session[myKeys.key_accountID], (string)this.Session[myKeys.key_rights]);
             Gebruiker_ID.Text = "<h2>" + currentAccount.Name +"</h2>";
+
             //string projectString = null;
 
             //foreach (Project project in dbProject.GetAllProjectsFromAccount(Convert.ToInt32(Session["accountID"])))
