@@ -8,7 +8,7 @@ using Kickstarter_web.classes;
 
 namespace Kickstarter_web.pages
 {
-    
+    using System.Web.UI.HtmlControls;
 
     public partial class allprojects : System.Web.UI.Page
     {
@@ -46,14 +46,11 @@ namespace Kickstarter_web.pages
             allProjects.Text = projectString;*/
         }
 
-        protected void Repeater_projects_ItemCommand(object source, RepeaterCommandEventArgs e)
+        protected void Repeater_projects_PreRender(object sender, EventArgs e)
         {
-            if (e.CommandName.Equals("BackProject"))
-            {       
-                string FID =e.CommandArgument.ToString();    
-                TextBox txtNote=e.Item.FindControl("BackAmount") as TextBox;    
-                string note=txtNote.Text;
-                MessageBox.Show(this, note);
+            if (Repeater_projects.Items.Count < 1)
+            {
+                NoRecords.Text = "<h3>Something went wrong #blameAthena</h3>";
             }
         }
     }

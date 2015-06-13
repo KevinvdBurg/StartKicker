@@ -7,8 +7,8 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="container_bottom" runat="server">     
     <asp:ObjectDataSource ID="ProjectAll" runat="server" SelectMethod="GetallProject" TypeName="Kickstarter_web.Administrator"></asp:ObjectDataSource>
-    
-    <asp:Repeater ID="Repeater_projects" runat="server" DataSourceID="ProjectAll" OnItemCommand="Repeater_projects_ItemCommand"  >
+    <asp:Literal ID="NoRecords" runat="server"></asp:Literal>
+    <asp:Repeater ID="Repeater_projects" runat="server" DataSourceID="ProjectAll" OnPreRender="Repeater_projects_PreRender"  >
         <SeparatorTemplate>
              <hr/>
         </SeparatorTemplate>

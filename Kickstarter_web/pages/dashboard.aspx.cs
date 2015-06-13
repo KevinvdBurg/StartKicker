@@ -7,7 +7,8 @@ using System.Web.UI.WebControls;
 using Kickstarter_web.classes;
 namespace Kickstarter_web.pages
 {
-    
+    using System.Web.UI.HtmlControls;
+
     public partial class dashboard : Page
     {
         private Account currentAccount;
@@ -17,25 +18,19 @@ namespace Kickstarter_web.pages
 
             var currentAccount = administrator.getAccountDetails((int)this.Session[myKeys.key_accountID], (string)this.Session[myKeys.key_rights]);
             Gebruiker_ID.Text = "<h2>" + currentAccount.Name +"</h2>";
+        }
 
-            //string projectString = null;
+        protected void Repeater_projects_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            
+        }
 
-            //foreach (Project project in dbProject.GetAllProjectsFromAccount(Convert.ToInt32(Session["accountID"])))
-            //{
-            //    projectString += "<h2 a href=\"\">" + project.Title + "</h2>";
-            //    projectString += "<table class=\"table\">";
-            //    projectString += "<tr><td width=\"30%\">ShortBlurb</td><td width=\"70%\">" + project.ShortBlurb + "</td></tr>";
-            //    projectString += "<tr><td>ProjectDescription</td><td>" + project.ProjectDescription + "</td></tr>";
-            //    projectString += "<tr><td>FundingDuration</td><td>" + project.FundingDuration + "</td></tr>";
-            //    projectString += "<tr><td>FundingGoal</td><td>" + project.FundingGoal + "</td></tr>";
-            //    projectString += "<tr><td>ProjectVideo</td><td>" + project.ProjectVideo + "</td></tr>";
-            //    projectString += "<tr><td>Category</td><td>" + project.Category + "</td></tr>";
-            //    projectString += "<tr><td>SubCategory</td><td>" + project.SubCategory + "</td></tr>";
-            //    projectString += "</table>";
-            //    projectString += "<hr />";
-            //}
-
-            //myProjects.Text = projectString;
+        protected void Repeater_projects_PreRender(object sender, EventArgs e)
+        {
+            if (Repeater_projects.Items.Count < 1)
+            {
+                NoRecords.Text = "<h3>All your backings will be here</h3>";
+            }
         }
     }
 }

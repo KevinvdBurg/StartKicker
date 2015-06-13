@@ -28,7 +28,7 @@ namespace Kickstarter_web.pages
 
             if (String.IsNullOrEmpty(value))
             {
-                MessageBox.Show(this, "Log eerst in voordat u een Project Backed");
+                MessageBox.Show(this, "First login, Login then Back a project");
             }
             else
             {
@@ -38,8 +38,15 @@ namespace Kickstarter_web.pages
                     if (txtName != null)
                     {
                         backamount = Convert.ToInt32(txtName.Text);
-                        MessageBox.Show(this, projectID + "   " + accountID + "  " + backamount);
-                        this.administrator.BackProject(projectID, accountID, backamount);
+                        if (this.administrator.BackProject(projectID, accountID, backamount))
+                        {
+                            MessageBox.Show(this, "Pledge is made");
+                        }
+                        else
+                        {
+                            MessageBox.Show(this, "Pledge can not be made");
+                        }
+                        
                     }
 
                     else

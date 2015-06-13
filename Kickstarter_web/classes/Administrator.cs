@@ -70,5 +70,10 @@ namespace Kickstarter_web
         {
             return this.dbProject.BackProject(projectId, accountId, backamount);
         }
+
+        public List<Backing> GetMyBackings(int accountID)
+        {
+            return this.dbProject.MyBackings(accountID);
+        } 
     }    
 }

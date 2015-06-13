@@ -284,22 +284,21 @@ namespace Kickstarter_web
         {
             bool resultaat = false;
 
-            string sql =
-                "INSERT INTO KICKSTARTER_BACKING(ACCOUNT_ID,PROJECT_ID,PLEDGEAMOUNT) VALUES(ACCOUNT_ID = :accountId,PROJECT_ID = :projectId, PLEDGEAMOUNT = :backamount)";
+            string sql = "INSERT INTO KICKSTARTER_BACKING(ACCOUNT_ID,PROJECT_ID,PLEDGEAMOUNT) VALUES(:accountId,:projectId,:backamount)";
             try
             {
                 this.Connect();
                 OracleCommand cmd = new OracleCommand(sql, this.connection);
-                cmd.Parameters.Add(new OracleParameter("ACCOUNT_ID", accountId));
-                cmd.Parameters.Add(new OracleParameter("PROJECT_ID", projectId));
-                cmd.Parameters.Add(new OracleParameter("PLEDGEAMOUNT", backamount));
+                cmd.Parameters.Add(new OracleParameter("accountId", accountId));
+                cmd.Parameters.Add(new OracleParameter("projectId", projectId));
+                cmd.Parameters.Add(new OracleParameter("backamount", backamount));
                 cmd.ExecuteNonQuery();
                 resultaat = true;
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                throw;
+                //throw;
             }
             finally
             {
@@ -311,7 +310,7 @@ namespace Kickstarter_web
         public List<Backing> MyBackings(int accountId)
         {
             string sql = "SELECT PROJECT_ID, PLEDGEAMOUNT, BETAALD FROM KICKSTARTER_BACKING WHERE ACCOUNT_ID = :accountId";
-            List<Backing> myBackings = null;
+            List<Backing> myBackings = new List<Backing>();
             try
             {
                 this.Connect();
@@ -320,18 +319,22 @@ namespace Kickstarter_web
                 OracleDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {
-                    bool betaald;
-                    int btld = Convert.ToInt32(reader["BETAALD"]);
-                    if (btld == 1)
+                    while (reader.Read())
                     {
-                        betaald = true;
+                        bool betaald;
+                        int btld = Convert.ToInt32(reader["BETAALD"]);
+                        if (btld == 1)
+                        {
+                            betaald = true;
+                        }
+                        else
+                        {
+                            betaald = false;
+                        }
+                        Backing myBacking = new Backing(Convert.ToInt32(reader["PLEDGEAMOUNT"]), betaald, GetProject(Convert.ToInt32(reader["PROJECT_ID"])), accountId);
+                        myBackings.Add(myBacking);
                     }
-                    else
-                    {
-                        betaald = false;
-                    }
-                    Backing myBacking = new Backing(Convert.ToInt32(reader["PLEDGEAMOUNT"]), betaald, GetProject(Convert.ToInt32(reader["PROJECT_ID"])), accountId);
-                    myBackings.Add(myBacking);
+                   
                 }
             }
             catch (OracleException e)

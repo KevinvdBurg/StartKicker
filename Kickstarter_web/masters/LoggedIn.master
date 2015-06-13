@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="navLeft" runat="server">
-    <li><a href="#">Gebackte Projecten</a></li>
+    <li><a href="/pages/mybackings.aspx">Gebackte Projecten</a></li>
     <li><a href="/pages/makeproject.aspx">Creeer project</a></li>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="navRight" runat="server">

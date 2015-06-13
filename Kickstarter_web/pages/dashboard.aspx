@@ -13,8 +13,8 @@
             <asp:SessionParameter Name="accountID" SessionField="accountID" Type="Int32" />
         </SelectParameters>
     </asp:ObjectDataSource>
-    
-    <asp:Repeater ID="Repeater_projects" runat="server" DataSourceID="myProjects">
+    <asp:Literal ID="NoRecords" runat="server"></asp:Literal>
+    <asp:Repeater ID="Repeater_projects" runat="server" DataSourceID="myProjects" OnPreRender="Repeater_projects_PreRender">
         <SeparatorTemplate>
              <hr/>
         </SeparatorTemplate>

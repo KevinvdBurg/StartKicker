@@ -96,9 +96,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="pages\allprojects.aspx" />
-    <Content Include="pages\backing.aspx" />
     <Content Include="pages\dashboard.aspx" />
     <Content Include="pages\makeproject.aspx" />
+    <Content Include="pages\mybackings.aspx" />
     <Content Include="pages\project.aspx" />
     <Content Include="pages\sign_up.aspx" />
     <Content Include="tile-wide.png" />
@@ -158,13 +158,6 @@
     <Compile Include="pages\allprojects.aspx.designer.cs">
       <DependentUpon>allprojects.aspx</DependentUpon>
     </Compile>
-    <Compile Include="pages\backing.aspx.cs">
-      <DependentUpon>backing.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="pages\backing.aspx.designer.cs">
-      <DependentUpon>backing.aspx</DependentUpon>
-    </Compile>
     <Compile Include="pages\dashboard.aspx.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -178,6 +171,13 @@
     </Compile>
     <Compile Include="pages\makeproject.aspx.designer.cs">
       <DependentUpon>makeproject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\mybackings.aspx.cs">
+      <DependentUpon>mybackings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\mybackings.aspx.designer.cs">
+      <DependentUpon>mybackings.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\project.aspx.cs">
       <DependentUpon>project.aspx</DependentUpon>
