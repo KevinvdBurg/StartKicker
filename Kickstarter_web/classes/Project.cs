@@ -25,11 +25,11 @@ namespace Kickstarter_web
         public string ProjectDescription { get; set; }
 
         public string RisksAndChallenges { get; set; }
-        public string Category { get; set; }
+        public Category Category { get; set; }
         public string SubCategory { get; set; }
-        public string ProjectID { get; set; }
+        public int ProjectID { get; set; }
 
-        public Project(string title, string shortBlurb, string projectLocation, string fundingDuration, int fundingGoal, string projectVideo, string projectDescription, string risksAndChallenges, string category, string subCategory, int projectID)
+        public Project(string title, string shortBlurb, string projectLocation, string fundingDuration, int fundingGoal, string projectVideo, string projectDescription, string risksAndChallenges, Category category, string subCategory, int projectID)
         {
             Title = title;
             ShortBlurb = shortBlurb;
@@ -41,7 +41,7 @@ namespace Kickstarter_web
             RisksAndChallenges = risksAndChallenges;
             Category = category;
             SubCategory = subCategory;
-            ProjectID = ProjectID;
+            ProjectID = projectID;
         }
 
         public Project()

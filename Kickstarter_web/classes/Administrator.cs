@@ -54,7 +54,19 @@ namespace Kickstarter_web
 
             return this.dbProject.GetProject(projectID);
         }
-    }
 
-    
+        public List<Category> GetCategories()
+        {
+            return this.dbProject.GetCategories();
+        }
+
+        
+        //Not needed  -- is should have
+        public List<SubCategory> GetSubCategories()
+        {
+            return this.dbProject.GetSubCategories();
+        }
+
+
+    }    
 }

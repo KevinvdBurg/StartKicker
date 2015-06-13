@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masters/empty.Master" AutoEventWireup="true" CodeBehind="one.master.cs" Inherits="Kickstarter_web.one" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="navLeft" runat="server">
+    <li><a href="/pages/allprojects.aspx">Alle Projecten</a></li>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="navRight" runat="server">
+    <li><a href="/pages/sign_up.aspx">Registreer</a></li>
+        <li class="divider-vertical"></li>
+        <li class="dropdown">
+        <a class="dropdown-toggle" href="#" data-toggle="dropdown">Inloggen<strong class="caret"></strong></a>
+        <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+            <p>
+                Email:
+                <asp:TextBox ID="tb_login_email" runat="server"></asp:TextBox>
+            </p>
+            <p>
+                Password:
+                <asp:TextBox ID="tb_login_password" runat="server" ></asp:TextBox>
+            </p>
+            <p>
+                <asp:Button ID="btn_login" runat="server" Text="Inloggen" class="btn btn-default" OnClick="btn_login_Click"/>
+            </p>
+        </div>
+    </li>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="jumbotron" runat="server">
+    <asp:ContentPlaceHolder ID="container_jumbo" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="container" runat="server">
+    <asp:ContentPlaceHolder ID="container_bottom" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>

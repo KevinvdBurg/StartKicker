@@ -40,13 +40,31 @@ namespace Kickstarter_web.pages {
         protected global::System.Web.UI.WebControls.TextBox proj_blurb;
         
         /// <summary>
+        /// objDataCat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource objDataCat;
+        
+        /// <summary>
         /// proj_category control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox proj_category;
+        protected global::System.Web.UI.WebControls.DropDownList proj_category;
+        
+        /// <summary>
+        /// objDataSubCat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource objDataSubCat;
         
         /// <summary>
         /// proj_subcategory control.
@@ -55,7 +73,7 @@ namespace Kickstarter_web.pages {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox proj_subcategory;
+        protected global::System.Web.UI.WebControls.DropDownList proj_subcategory;
         
         /// <summary>
         /// proj_location control.
@@ -121,12 +139,12 @@ namespace Kickstarter_web.pages {
         protected global::System.Web.UI.WebControls.Button proj_button;
         
         /// <summary>
-        /// proj_message control.
+        /// CustomValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal proj_message;
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator1;
     }
 }

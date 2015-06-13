@@ -85,6 +85,7 @@
     <Content Include="masters\empty.Master" />
     <Content Include="masters\one.master" />
     <Content Include="masters\LoggedIn.master" />
+    <None Include="Properties\PublishProfiles\ICT4Events.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

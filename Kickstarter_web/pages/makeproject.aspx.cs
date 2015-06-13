@@ -20,7 +20,8 @@ namespace Kickstarter_web.pages
         {
             if (Page.IsValid)
             {
-                Project newProject = new Project(proj_title.Text, proj_blurb.Text, proj_location.Text, proj_funding_duration.Text, Convert.ToInt32(proj_funding_goal.Text), proj_video.Text, proj_disc.Text, proj_riskcha.Text, proj_category.Text, proj_subcategory.Text, 0);
+                Category newCategory = new Category(Convert.ToInt32(proj_category.SelectedItem.Value), Convert.ToString(proj_category.SelectedItem.Text));
+                Project newProject = new Project(proj_title.Text, proj_blurb.Text, proj_location.Text, proj_funding_duration.Text, Convert.ToInt32(proj_funding_goal.Text), proj_video.Text, proj_disc.Text, proj_riskcha.Text, newCategory, "1", 0);
 
                 if (administrator.CreeerProject(newProject, Convert.ToInt32(Session[myKeys.key_accountID])))
                 {
@@ -28,6 +29,7 @@ namespace Kickstarter_web.pages
                 }
             }
         }
+
 
         protected void CustomValidatorproj_title_OnServerValidate(object source, ServerValidateEventArgs args)
         {

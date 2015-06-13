@@ -22,15 +22,17 @@
                 <tr>
                     <td>Category</td>
                     <td>
-                        <asp:TextBox ID="proj_category" runat="server"></asp:TextBox>
+                        <asp:ObjectDataSource ID="objDataCat" runat="server"  SelectMethod="GetCategories" TypeName="Kickstarter_web.Administrator" ></asp:ObjectDataSource>
+                        <asp:DropDownList ID="proj_category" runat="server" DataSourceID="objDataCat" DataTextField="Name" DataValueField="ID"></asp:DropDownList>
                     </td>
                 </tr>
-                <tr>
+                <!--tr>
                     <td>Sub Category</td>
                     <td>
-                        <asp:TextBox ID="proj_subcategory" runat="server"></asp:TextBox>
+                        <asp:ObjectDataSource ID="objDataSubCat" runat="server"  SelectMethod="GetSubCategories" TypeName="Kickstarter_web.Administrator"></asp:ObjectDataSource>
+                        <asp:DropDownList ID="proj_subcategory" runat="server" DataSourceID="objDataSubCat" DataTextField="Name" DataValueField="ID"></asp:DropDownList>
                     </td>
-                </tr>
+                </tr-->
                 <tr>
                     <td>Location</td>
                     <td>
@@ -77,7 +79,7 @@
             </table>
         </div>
         <div class="col-md-4">
-            <asp:Literal ID="proj_message" runat="server"></asp:Literal>
+            <asp:CustomValidator ID="CustomValidator1" runat="server" ControlToValidate="proj_title" ValidateEmptyText="true" ErrorMessage="CustomValidator" Display="Dynamic" OnServerValidate="CustomValidatorproj_title_OnServerValidate" ShowSummary="true"></asp:CustomValidator>
         </div>
       </div>
 

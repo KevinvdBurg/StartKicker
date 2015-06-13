@@ -8,26 +8,14 @@ namespace Kickstarter_web
 {
     public class Category
     {
-        public string Name
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public int ID { get; set; }
 
-        public Project Project
+        public string Name { get; set; }
+
+        public Category(int id, string name)
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            ID = id;
+            Name = name;
         }
     }
 }

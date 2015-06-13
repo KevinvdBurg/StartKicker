@@ -8,37 +8,16 @@ namespace Kickstarter_web
 {
     public class SubCategory
     {
-        public string Name
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public int ID { get; set; }
 
-        public Category Category
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public string Name { get; set; }
+        public Category Category { get; set; }
 
-        public Project Project
+        public SubCategory(int id, string name, Category category)
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            ID = id;
+            Name = name;
+            Category = category;
         }
     }
 }
