@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="container_jumbo" runat="server">
     <h1>StartKicker</h1>
     <p></p>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button" id="jumbo">To the Projects &raquo;</a></p>
+    <p><a class="btn btn-primary btn-lg" href="/pages/allprojects.aspx" role="button" id="jumbo">To the Projects &raquo;</a></p>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="container_bottom" runat="server">
     <div class="row text-center">
