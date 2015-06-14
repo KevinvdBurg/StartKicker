@@ -1,25 +1,25 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="index.aspx.cs" company="">
+// <copyright file="index.aspx.cs" company="StartKicker">
 //   
 // </copyright>
 // <summary>
-//   The index 2.
+//   The Index from the website
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
 
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-
 namespace Kickstarter_web
 {
+
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web;
+    using System.Web.UI;
+    using System.Web.UI.WebControls;
+
     /// <summary>
-    /// The index 2.
+    /// The index.
     /// </summary>
     public partial class index2 : System.Web.UI.Page
     {

@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="addreward.aspx.cs" company="">
+// <copyright file="addreward.aspx.cs" company="StartKicker">
 //   
 // </copyright>
 // <summary>
@@ -9,17 +9,18 @@
 
 
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+
 
 namespace Kickstarter_web.pages
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web;
+    using System.Web.UI;
+    using System.Web.UI.WebControls;
     /// <summary>
-    /// The add reward.
+    /// The add reward page
     /// </summary>
     public partial class addReward : System.Web.UI.Page
     {
@@ -29,7 +30,7 @@ namespace Kickstarter_web.pages
         Administrator administrator = new Administrator();
 
         /// <summary>
-        /// The page_ load.
+        /// No Actions on the Page Load
         /// </summary>
         /// <param name="sender">
         /// The sender.
@@ -43,7 +44,7 @@ namespace Kickstarter_web.pages
         }
 
         /// <summary>
-        /// The rew_button_ click.
+        /// It will pass all the data to the Administrator 
         /// </summary>
         /// <param name="sender">
         /// The sender.

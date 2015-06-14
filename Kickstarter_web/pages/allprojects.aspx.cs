@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="allprojects.aspx.cs" company="">
+// <copyright file="allprojects.aspx.cs" company="StartKicker">
 //   
 // </copyright>
 // <summary>
@@ -9,17 +9,18 @@
 
 
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
-using Kickstarter_web.classes;
 
 namespace Kickstarter_web.pages
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web;
+    using System.Web.UI;
+    using System.Web.UI.WebControls;
+
+    using Kickstarter_web.classes;
     using System.Web.UI.HtmlControls;
 
     /// <summary>

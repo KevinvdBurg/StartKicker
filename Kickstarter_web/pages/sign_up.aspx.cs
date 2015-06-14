@@ -9,16 +9,15 @@
 
 
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-
 namespace Kickstarter_web.pages
 {
     using System.Threading;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web;
+    using System.Web.UI;
+    using System.Web.UI.WebControls;
 
     /// <summary>
     /// The sign_up.
