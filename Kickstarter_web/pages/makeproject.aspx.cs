@@ -1,21 +1,58 @@
-﻿using System;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="makeproject.aspx.cs" company="">
+//   
+// </copyright>
+// <summary>
+//   The makeproject.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+
 using Kickstarter_web.classes;
 
 namespace Kickstarter_web.pages
 {
+    /// <summary>
+    /// The makeproject.
+    /// </summary>
     public partial class makeproject : System.Web.UI.Page
     {
+        /// <summary>
+        /// The administrator.
+        /// </summary>
         Administrator administrator = new Administrator();
+
+        /// <summary>
+        /// The page_ load.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
+        /// <summary>
+        /// The proj_button_ click.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         protected void proj_button_Click(object sender, EventArgs e)
         {
             if (Page.IsValid)
@@ -30,7 +67,15 @@ namespace Kickstarter_web.pages
             }
         }
 
-
+        /// <summary>
+        /// The custom validatorproj_title_ on server validate.
+        /// </summary>
+        /// <param name="source">
+        /// The source.
+        /// </param>
+        /// <param name="args">
+        /// The args.
+        /// </param>
         protected void CustomValidatorproj_title_OnServerValidate(object source, ServerValidateEventArgs args)
         {
             Console.WriteLine("In Validator?");

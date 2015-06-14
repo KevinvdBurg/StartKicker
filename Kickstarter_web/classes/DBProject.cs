@@ -1,21 +1,43 @@
-﻿using System;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="DBProject.cs" company="">
+//   
+// </copyright>
+// <summary>
+//   The db project.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+
+
+using System;
 using System.Web;
 using System.Web.Services;
 using System.Web.Services.Protocols;
 using System.ComponentModel;
+
 using Oracle.DataAccess.Client;
 
 namespace Kickstarter_web
 {
     using System.Collections.Generic;
 
+    /// <summary>
+    /// The db project.
+    /// </summary>
     public class DBProject : Database
     {
-        public void Delete()
-        {
-            throw new System.NotImplementedException();
-        }
-
+        /// <summary>
+        /// The insert.
+        /// </summary>
+        /// <param name="project">
+        /// The project.
+        /// </param>
+        /// <param name="accountID">
+        /// The account id.
+        /// </param>
+        /// <returns>
+        /// The <see cref="bool"/>.
+        /// </returns>
         public bool Insert(Project project, int accountID)
         {
             bool resultaat = false;
@@ -26,7 +48,7 @@ namespace Kickstarter_web
             {
                 this.Connect();
                 OracleCommand cmd = new OracleCommand(sql, this.connection);
-                cmd.Parameters.Add(new OracleParameter("ACCOUNT_ID",accountID));
+                cmd.Parameters.Add(new OracleParameter("ACCOUNT_ID", accountID));
                 cmd.Parameters.Add(new OracleParameter("TITLE", project.Title));
                 cmd.Parameters.Add(new OracleParameter("SHORTBLURB", project.ShortBlurb));
                 cmd.Parameters.Add(new OracleParameter("CATEGORY_ID", project.Category.ID));
@@ -53,11 +75,12 @@ namespace Kickstarter_web
             return resultaat;
         }
 
-        public void Update()
-        {
-            throw new System.NotImplementedException();
-        }
-
+        /// <summary>
+        /// The get all projects.
+        /// </summary>
+        /// <returns>
+        /// The <see cref="List"/>.
+        /// </returns>
         public List<Project> GetAllProjects()
         {
             string sql = "SELECT p.TITLE, p.SHORTBLURB, p.CATEGORY_ID, c.KICKNAME, p.SUBCATEGORY_ID, p.PROJECT_LOCATION, p.FUNDING_DURATION, p.FUNDING_GOAL, p.PROJECTVIDEO, p.PROJECTDESCRIPTION, p.RISKSANDCHALLENGES, p.PROJECT_ID FROM KICKSTARTER_PROJECT p INNER JOIN KICKSTARTER_CATEGORY c ON c.CATEGORY_ID = p.CATEGORY_ID";
@@ -73,19 +96,19 @@ namespace Kickstarter_web
                     while (reader.Read())
                     {
                         Category cat = new Category(
-                            Convert.ToInt32(reader["CATEGORY_ID"]),
+                            Convert.ToInt32(reader["CATEGORY_ID"]), 
                             Convert.ToString(reader["KICKNAME"]));
                         Project tempProject = new Project(
                             Convert.ToString(reader["TITLE"]), 
                             Convert.ToString(reader["SHORTBLURB"]), 
-                            Convert.ToString(reader["PROJECT_LOCATION"]),
-                            Convert.ToString(reader["FUNDING_DURATION"]),
-                            Convert.ToInt32(reader["FUNDING_GOAL"]),
-                            Convert.ToString(reader["PROJECTVIDEO"]),
-                            Convert.ToString(reader["PROJECTDESCRIPTION"]),
-                            Convert.ToString(reader["RISKSANDCHALLENGES"]),
-                            cat,
-                            Convert.ToString(reader["SUBCATEGORY_ID"]),
+                            Convert.ToString(reader["PROJECT_LOCATION"]), 
+                            Convert.ToString(reader["FUNDING_DURATION"]), 
+                            Convert.ToInt32(reader["FUNDING_GOAL"]), 
+                            Convert.ToString(reader["PROJECTVIDEO"]), 
+                            Convert.ToString(reader["PROJECTDESCRIPTION"]), 
+                            Convert.ToString(reader["RISKSANDCHALLENGES"]), 
+                            cat, 
+                            Convert.ToString(reader["SUBCATEGORY_ID"]), 
                             Convert.ToInt32(reader["PROJECT_ID"]));
                         listProjects.Add(tempProject);
                     }
@@ -102,6 +125,13 @@ namespace Kickstarter_web
 
             return listProjects;
         }
+
+        /// <summary>
+        /// The get 4 random projects.
+        /// </summary>
+        /// <returns>
+        /// The <see cref="List"/>.
+        /// </returns>
         public List<Project> Get4RandomProjects()
         {
             string sql = "SELECT p.TITLE, p.SHORTBLURB, p.CATEGORY_ID, c.KICKNAME, p.SUBCATEGORY_ID, p.PROJECT_LOCATION, p.FUNDING_DURATION, p.FUNDING_GOAL, p.PROJECTVIDEO, p.PROJECTDESCRIPTION, p.RISKSANDCHALLENGES, p.PROJECT_ID FROM KICKSTARTER_PROJECT p INNER JOIN KICKSTARTER_CATEGORY c ON c.CATEGORY_ID = p.CATEGORY_ID ORDER BY dbms_random.value";
@@ -118,19 +148,19 @@ namespace Kickstarter_web
                     while (reader.Read() && count < 4)
                         {
                             Category cat = new Category(
-                            Convert.ToInt32(reader["CATEGORY_ID"]),
+                            Convert.ToInt32(reader["CATEGORY_ID"]), 
                             Convert.ToString(reader["KICKNAME"]));
                             Project tempProject = new Project(
-                                Convert.ToString(reader["TITLE"]),
-                                Convert.ToString(reader["SHORTBLURB"]),
-                                Convert.ToString(reader["PROJECT_LOCATION"]),
-                                Convert.ToString(reader["FUNDING_DURATION"]),
-                                Convert.ToInt32(reader["FUNDING_GOAL"]),
-                                Convert.ToString(reader["PROJECTVIDEO"]),
-                                Convert.ToString(reader["PROJECTDESCRIPTION"]),
-                                Convert.ToString(reader["RISKSANDCHALLENGES"]),
-                                cat,
-                                Convert.ToString(reader["SUBCATEGORY_ID"]),
+                                Convert.ToString(reader["TITLE"]), 
+                                Convert.ToString(reader["SHORTBLURB"]), 
+                                Convert.ToString(reader["PROJECT_LOCATION"]), 
+                                Convert.ToString(reader["FUNDING_DURATION"]), 
+                                Convert.ToInt32(reader["FUNDING_GOAL"]), 
+                                Convert.ToString(reader["PROJECTVIDEO"]), 
+                                Convert.ToString(reader["PROJECTDESCRIPTION"]), 
+                                Convert.ToString(reader["RISKSANDCHALLENGES"]), 
+                                cat, 
+                                Convert.ToString(reader["SUBCATEGORY_ID"]), 
                                 Convert.ToInt32(reader["PROJECT_ID"]));
                             listProjects.Add(tempProject);
                             count++;
@@ -148,9 +178,19 @@ namespace Kickstarter_web
 
             return listProjects;
         }
+
+        /// <summary>
+        /// The get all projects from account.
+        /// </summary>
+        /// <param name="accountID">
+        /// The account id.
+        /// </param>
+        /// <returns>
+        /// The <see cref="List"/>.
+        /// </returns>
         public List<Project> GetAllProjectsFromAccount(int accountID)
         {
-            //string sql = "SELECT TITLE,SHORTBLURB, CATEGORY_ID, SUBCATEGORY_ID, PROJECT_LOCATION, FUNDING_DURATION, FUNDING_GOAL, PROJECTVIDEO, PROJECTDESCRIPTION, RISKSANDCHALLENGES, PROJECT_ID FROM KICKSTARTER_PROJECT WHERE ACCOUNT_ID = :accountID";
+            // string sql = "SELECT TITLE,SHORTBLURB, CATEGORY_ID, SUBCATEGORY_ID, PROJECT_LOCATION, FUNDING_DURATION, FUNDING_GOAL, PROJECTVIDEO, PROJECTDESCRIPTION, RISKSANDCHALLENGES, PROJECT_ID FROM KICKSTARTER_PROJECT WHERE ACCOUNT_ID = :accountID";
             string sql = "SELECT p.TITLE, p.SHORTBLURB, p.CATEGORY_ID, c.KICKNAME, p.SUBCATEGORY_ID, p.PROJECT_LOCATION, p.FUNDING_DURATION, p.FUNDING_GOAL, p.PROJECTVIDEO, p.PROJECTDESCRIPTION, p.RISKSANDCHALLENGES, p.PROJECT_ID FROM KICKSTARTER_PROJECT p INNER JOIN KICKSTARTER_CATEGORY c ON c.CATEGORY_ID = p.CATEGORY_ID WHERE p.ACCOUNT_ID = :accountID";
             List<Project> listProjects = new List<Project>();
 
@@ -165,19 +205,19 @@ namespace Kickstarter_web
                     while (reader.Read())
                     {
                          Category cat = new Category(
-                            Convert.ToInt32(reader["CATEGORY_ID"]),
+                            Convert.ToInt32(reader["CATEGORY_ID"]), 
                             Convert.ToString(reader["KICKNAME"]));
                         Project tempProject = new Project(
-                            Convert.ToString(reader["TITLE"]),
-                            Convert.ToString(reader["SHORTBLURB"]),
-                            Convert.ToString(reader["PROJECT_LOCATION"]),
-                            Convert.ToString(reader["FUNDING_DURATION"]),
-                            Convert.ToInt32(reader["FUNDING_GOAL"]),
-                            Convert.ToString(reader["PROJECTVIDEO"]),
-                            Convert.ToString(reader["PROJECTDESCRIPTION"]),
-                            Convert.ToString(reader["RISKSANDCHALLENGES"]),
-                            cat,
-                            Convert.ToString(reader["SUBCATEGORY_ID"]),
+                            Convert.ToString(reader["TITLE"]), 
+                            Convert.ToString(reader["SHORTBLURB"]), 
+                            Convert.ToString(reader["PROJECT_LOCATION"]), 
+                            Convert.ToString(reader["FUNDING_DURATION"]), 
+                            Convert.ToInt32(reader["FUNDING_GOAL"]), 
+                            Convert.ToString(reader["PROJECTVIDEO"]), 
+                            Convert.ToString(reader["PROJECTDESCRIPTION"]), 
+                            Convert.ToString(reader["RISKSANDCHALLENGES"]), 
+                            cat, 
+                            Convert.ToString(reader["SUBCATEGORY_ID"]), 
                             Convert.ToInt32(reader["PROJECT_ID"]));
                         listProjects.Add(tempProject);
                     }
@@ -191,9 +231,19 @@ namespace Kickstarter_web
             {
                 this.connection.Close();
             }
+
             return listProjects;
         }
 
+        /// <summary>
+        /// The get project.
+        /// </summary>
+        /// <param name="projectID">
+        /// The project id.
+        /// </param>
+        /// <returns>
+        /// The <see cref="Project"/>.
+        /// </returns>
         public Project GetProject(int projectID)
         {
             string sql = "SELECT p.TITLE, p.SHORTBLURB, p.CATEGORY_ID, c.KICKNAME, p.SUBCATEGORY_ID, p.PROJECT_LOCATION, p.FUNDING_DURATION, p.FUNDING_GOAL, p.PROJECTVIDEO, p.PROJECTDESCRIPTION, p.RISKSANDCHALLENGES, p.PROJECT_ID FROM KICKSTARTER_PROJECT p INNER JOIN KICKSTARTER_CATEGORY c ON c.CATEGORY_ID = p.CATEGORY_ID WHERE p.PROJECT_ID = :projectID";
@@ -208,19 +258,19 @@ namespace Kickstarter_web
                 if (reader.HasRows)
                 {
                     Category cat = new Category(
-                            Convert.ToInt32(reader["CATEGORY_ID"]),
+                            Convert.ToInt32(reader["CATEGORY_ID"]), 
                             Convert.ToString(reader["KICKNAME"]));
                         Project tempProject = new Project(
-                            Convert.ToString(reader["TITLE"]),
-                            Convert.ToString(reader["SHORTBLURB"]),
-                            Convert.ToString(reader["PROJECT_LOCATION"]),
-                            Convert.ToString(reader["FUNDING_DURATION"]),
-                            Convert.ToInt32(reader["FUNDING_GOAL"]),
-                            Convert.ToString(reader["PROJECTVIDEO"]),
-                            Convert.ToString(reader["PROJECTDESCRIPTION"]),
-                            Convert.ToString(reader["RISKSANDCHALLENGES"]),
-                            cat,
-                            Convert.ToString(reader["SUBCATEGORY_ID"]),
+                            Convert.ToString(reader["TITLE"]), 
+                            Convert.ToString(reader["SHORTBLURB"]), 
+                            Convert.ToString(reader["PROJECT_LOCATION"]), 
+                            Convert.ToString(reader["FUNDING_DURATION"]), 
+                            Convert.ToInt32(reader["FUNDING_GOAL"]), 
+                            Convert.ToString(reader["PROJECTVIDEO"]), 
+                            Convert.ToString(reader["PROJECTDESCRIPTION"]), 
+                            Convert.ToString(reader["RISKSANDCHALLENGES"]), 
+                            cat, 
+                            Convert.ToString(reader["SUBCATEGORY_ID"]), 
                             Convert.ToInt32(reader["PROJECT_ID"]));
                     thisProjects = tempProject;
                 }
@@ -233,9 +283,16 @@ namespace Kickstarter_web
             {
                 this.connection.Close();
             }
+
             return thisProjects;
         }
 
+        /// <summary>
+        /// The get categories.
+        /// </summary>
+        /// <returns>
+        /// The <see cref="List"/>.
+        /// </returns>
         public List<Category> GetCategories()
         {
             string sql = "SELECT CATEGORY_ID, KICKNAME FROM KICKSTARTER_CATEGORY";
@@ -263,11 +320,16 @@ namespace Kickstarter_web
             {
                 this.connection.Close();
             }
+
             return listCategory;
         }
 
-
-
+        /// <summary>
+        /// The get sub categories.
+        /// </summary>
+        /// <returns>
+        /// The <see cref="List"/>.
+        /// </returns>
         public List<SubCategory> GetSubCategories()
         {
             string sql = "SELECT s.SUBCATEGORY_ID as SUBID, s.KICKNAME as SUBNAME, c.CATEGORY_ID as CATID, c.KICKNAME AS CATNAME FROM KICKSTARTER_SUBCATEGORY s INNER JOIN KICKSTARTER_CATEGORY c ON s.CATEGORY_ID = c.CATEGORY_ID; ";
@@ -296,13 +358,23 @@ namespace Kickstarter_web
             {
                 this.connection.Close();
             }
+
             return listSubCategories;
         }
 
+        /// <summary>
+        /// The get category name.
+        /// </summary>
+        /// <param name="id">
+        /// The id.
+        /// </param>
+        /// <returns>
+        /// The <see cref="string"/>.
+        /// </returns>
         public string GetCategoryName(int id)
         {
             string sql = "SELECT KICKNAME FROM KICKSTARTER_CATEGORY WHERE CATEGORY_ID = :id";
-            string result = "";
+            string result = string.Empty;
             try
             {
                 this.Connect();
@@ -322,9 +394,25 @@ namespace Kickstarter_web
             {
                 this.connection.Close();
             }
+
             return result;
         }
 
+        /// <summary>
+        /// The back project.
+        /// </summary>
+        /// <param name="projectId">
+        /// The project id.
+        /// </param>
+        /// <param name="accountId">
+        /// The account id.
+        /// </param>
+        /// <param name="backamount">
+        /// The backamount.
+        /// </param>
+        /// <returns>
+        /// The <see cref="bool"/>.
+        /// </returns>
         public bool BackProject(string projectId, int accountId, int backamount)
         {
             bool resultaat = false;
@@ -343,15 +431,26 @@ namespace Kickstarter_web
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                //throw;
+
+                // throw;
             }
             finally
             {
                 this.connection.Close();
             }
+
             return resultaat;
         }
 
+        /// <summary>
+        /// The my backings.
+        /// </summary>
+        /// <param name="accountId">
+        /// The account id.
+        /// </param>
+        /// <returns>
+        /// The <see cref="List"/>.
+        /// </returns>
         public List<Backing> MyBackings(int accountId)
         {
             string sql = "SELECT PROJECT_ID, PLEDGEAMOUNT, BETAALD FROM KICKSTARTER_BACKING WHERE ACCOUNT_ID = :accountId";
@@ -376,6 +475,7 @@ namespace Kickstarter_web
                         {
                             betaald = false;
                         }
+
                         Backing myBacking = new Backing(Convert.ToInt32(reader["PLEDGEAMOUNT"]), betaald, GetProject(Convert.ToInt32(reader["PROJECT_ID"])), accountId);
                         myBackings.Add(myBacking);
                     }
@@ -390,6 +490,7 @@ namespace Kickstarter_web
             {
                 this.connection.Close();
             }
+
             return myBackings;
         }
     }

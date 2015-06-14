@@ -1,4 +1,15 @@
-﻿using System;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="DBLogin.cs" company="">
+//   
+// </copyright>
+// <summary>
+//   The db login.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+
+
+using System;
 using System.Web;
 using System.Web.Services;
 using System.Web.Services.Protocols;
@@ -8,8 +19,23 @@ namespace Kickstarter_web
 {
     using Oracle.DataAccess.Client;
 
+    /// <summary>
+    /// The db login.
+    /// </summary>
     public class DBLogin : Database
     {
+        /// <summary>
+        /// The login.
+        /// </summary>
+        /// <param name="email">
+        /// The email.
+        /// </param>
+        /// <param name="password">
+        /// The password.
+        /// </param>
+        /// <returns>
+        /// The <see cref="Account"/>.
+        /// </returns>
         public Account Login(string email, string password)
         {
             Account newAccount = null;
@@ -17,8 +43,10 @@ namespace Kickstarter_web
             string rights;
 
             string sql;
-            sql = "SELECT ACCOUNT_ID, RIGHTS FROM KICKSTARTER_ACCOUNT WHERE EMAIL = LOWER(:email) AND KICKPASSWORD = :password";
-            //sql = "SELECT * FROM KICKSTARTER_ACCOUNT;";
+            sql =
+                "SELECT ACCOUNT_ID, RIGHTS FROM KICKSTARTER_ACCOUNT WHERE EMAIL = LOWER(:email) AND KICKPASSWORD = :password";
+
+            // sql = "SELECT * FROM KICKSTARTER_ACCOUNT;";
             try
             {
                 this.Connect();
@@ -30,7 +58,7 @@ namespace Kickstarter_web
                 {
                     accountID = Convert.ToInt32(reader["ACCOUNT_ID"]);
                     rights = Convert.ToString(reader["RIGHTS"]);
-                    
+
                     if (rights == "user")
                     {
                         newAccount = new Account(accountID);
@@ -53,6 +81,18 @@ namespace Kickstarter_web
             return newAccount;
         }
 
+        /// <summary>
+        /// The get account.
+        /// </summary>
+        /// <param name="account_id">
+        /// The account_id.
+        /// </param>
+        /// <param name="rights">
+        /// The rights.
+        /// </param>
+        /// <returns>
+        /// The <see cref="Account"/>.
+        /// </returns>
         public Account GetAccount(int account_id, string rights)
         {
             Account newAccount = null;
@@ -81,31 +121,31 @@ namespace Kickstarter_web
                     if (rights == "user")
                     {
                         newAccount = new Account(
-                            account_id,
-                            Convert.ToString(reader["email"]),
-                            Convert.ToString(reader["phone"]),
-                            Convert.ToString(reader["kickname"]),
-                            Convert.ToString(reader["picture"]),
-                            Convert.ToString(reader["biography"]),
-                            Convert.ToString(reader["kicklocation"]),
-                            Convert.ToString(reader["timezone"]),
+                            account_id, 
+                            Convert.ToString(reader["email"]), 
+                            Convert.ToString(reader["phone"]), 
+                            Convert.ToString(reader["kickname"]), 
+                            Convert.ToString(reader["picture"]), 
+                            Convert.ToString(reader["biography"]), 
+                            Convert.ToString(reader["kicklocation"]), 
+                            Convert.ToString(reader["timezone"]), 
                             Convert.ToString(reader["vanity_url"]));
                     }
                     else if (rights == "admin")
                     {
                         
                         newAccount = new Admin(
-                            account_id,
-                            Convert.ToString(reader["email"]),
-                            Convert.ToString(reader["phone"]),
-                            Convert.ToString(reader["kickname"]),
-                            Convert.ToString(reader["picture"]),
-                            Convert.ToString(reader["biography"]),
-                            Convert.ToString(reader["kicklocation"]),
-                            Convert.ToString(reader["timezone"]),
-                            Convert.ToString(reader["vanity_url"]),
-                            Convert.ToString(reader["workemail"]),
-                            Convert.ToDouble(reader["salary"]),
+                            account_id, 
+                            Convert.ToString(reader["email"]), 
+                            Convert.ToString(reader["phone"]), 
+                            Convert.ToString(reader["kickname"]), 
+                            Convert.ToString(reader["picture"]), 
+                            Convert.ToString(reader["biography"]), 
+                            Convert.ToString(reader["kicklocation"]), 
+                            Convert.ToString(reader["timezone"]), 
+                            Convert.ToString(reader["vanity_url"]), 
+                            Convert.ToString(reader["workemail"]), 
+                            Convert.ToDouble(reader["salary"]), 
                             Convert.ToString(reader["DEPARTMENT"]));
                     }
                 }
