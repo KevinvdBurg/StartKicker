@@ -121,15 +121,15 @@ namespace Kickstarter_web
         /// </param>
         public Account(int accountId, string email, string phone, string name, string picture, string biography, string location, string timeZone, string vanityUrl)
         {
-            AccountID = accountId;
-            Email = email;
-            Phone = phone;
-            Name = name;
-            Picture = picture;
-            Biography = biography;
-            Location = location;
-            TimeZone = timeZone;
-            Vanity_URL = vanityUrl;
+            this.AccountID = accountId;
+            this.Email = email;
+            this.Phone = phone;
+            this.Name = name;
+            this.Picture = picture;
+            this.Biography = biography;
+            this.Location = location;
+            this.TimeZone = timeZone;
+            this.Vanity_URL = vanityUrl;
         }
 
         /// <summary>
@@ -140,7 +140,7 @@ namespace Kickstarter_web
         /// </param>
         public Account(int accountId)
         {
-            AccountID = accountId;
+            this.AccountID = accountId;
         }
 
 

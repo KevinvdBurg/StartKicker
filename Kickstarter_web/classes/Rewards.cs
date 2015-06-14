@@ -76,12 +76,12 @@ namespace Kickstarter_web
         /// </param>
         public Rewards(string name, int price, string description, string delivery, int prevReward, int thisReward)
         {
-            Name = name;
-            Price = price;
-            Description = description;
-            Delivery = delivery;
-            PrevReward = prevReward;
-            ThisReward = thisReward;
+            this.Name = name;
+            this.Price = price;
+            this.Description = description;
+            this.Delivery = delivery;
+            this.PrevReward = prevReward;
+            this.ThisReward = thisReward;
         }
 
         /// <summary>
@@ -105,11 +105,11 @@ namespace Kickstarter_web
         /// </param>
         public Rewards(string name, int price, string description, string delivery, int prevReward)
         {
-            Name = name;
-            Price = price;
-            Description = description;
-            Delivery = delivery;
-            PrevReward = prevReward;
+            this.Name = name;
+            this.Price = price;
+            this.Description = description;
+            this.Delivery = delivery;
+            this.PrevReward = prevReward;
         }
 
         /// <summary>
@@ -130,10 +130,10 @@ namespace Kickstarter_web
         /// </param>
         public Rewards(string name, int price, string description, string delivery)
         {
-            Name = name;
-            Price = price;
-            Description = description;
-            Delivery = delivery;
+            this.Name = name;
+            this.Price = price;
+            this.Description = description;
+            this.Delivery = delivery;
         }
 
         /// <summary>

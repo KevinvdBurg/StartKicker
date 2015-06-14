@@ -91,9 +91,9 @@ namespace Kickstarter_web
         public Admin(int accountId, string email, string phone, string name, string picture, string biography, string location, string timeZone, string vanityUrl, string workEmail, double salary, string department)
             : base(accountId, email, phone, name, picture, biography, location, timeZone, vanityUrl)
         {
-            WorkEmail = workEmail;
-            Salary = salary;
-            Department = department;    
+            this.WorkEmail = workEmail;
+            this.Salary = salary;
+            this.Department = department;    
         }
 
         /// <summary>

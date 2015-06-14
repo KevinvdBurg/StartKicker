@@ -57,13 +57,13 @@ namespace Kickstarter_web
         {
             try
             {
-                connection = new OracleConnection();
-                connection.ConnectionString = connectionString;
-                connection.Open();
+                this.connection = new OracleConnection();
+                this.connection.ConnectionString = connectionString;
+                this.connection.Open();
             }
             catch
             {
-                connection.Close();
+                this.connection.Close();
             }
         }
 
@@ -73,8 +73,8 @@ namespace Kickstarter_web
         /// </summary>
         public void DisConnect()
         {
-            connection.Close();
-            connection.Dispose();
+            this.connection.Close();
+            this.connection.Dispose();
         }
     }
 }

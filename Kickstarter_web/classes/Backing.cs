@@ -59,10 +59,10 @@ namespace Kickstarter_web
         /// </param>
         public Backing(int pledgeAmount, bool betaald, Project projectId, int accountId)
         {
-            PledgeAmount = pledgeAmount;
-            Betaald = betaald;
-            ProjectID = projectId;
-            AccountID = accountId;  
+            this.PledgeAmount = pledgeAmount;
+            this.Betaald = betaald;
+            this.ProjectID = projectId;
+            this.AccountID = accountId;  
         }
 
     }

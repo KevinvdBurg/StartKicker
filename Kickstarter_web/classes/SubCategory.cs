@@ -51,9 +51,9 @@ namespace Kickstarter_web
         /// </param>
         public SubCategory(int id, string name, Category category)
         {
-            ID = id;
-            Name = name;
-            Category = category;
+            this.ID = id;
+            this.Name = name;
+            this.Category = category;
         }
     }
 }

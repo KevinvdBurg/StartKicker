@@ -117,17 +117,17 @@ namespace Kickstarter_web
         /// </param>
         public Project(string title, string shortBlurb, string projectLocation, string fundingDuration, int fundingGoal, string projectVideo, string projectDescription, string risksAndChallenges, Category category, string subCategory, int projectID)
         {
-            Title = title;
-            ShortBlurb = shortBlurb;
-            ProjectLocation = projectLocation;
-            FundingDuration = fundingDuration;
-            FundingGoal = fundingGoal;
-            ProjectVideo = projectVideo;
-            ProjectDescription = projectDescription;
-            RisksAndChallenges = risksAndChallenges;
-            Category = category;
-            SubCategory = subCategory;
-            ProjectID = projectID;
+            this.Title = title;
+            this.ShortBlurb = shortBlurb;
+            this.ProjectLocation = projectLocation;
+            this.FundingDuration = fundingDuration;
+            this.FundingGoal = fundingGoal;
+            this.ProjectVideo = projectVideo;
+            this.ProjectDescription = projectDescription;
+            this.RisksAndChallenges = risksAndChallenges;
+            this.Category = category;
+            this.SubCategory = subCategory;
+            this.ProjectID = projectID;
         }
 
         /// <summary>
