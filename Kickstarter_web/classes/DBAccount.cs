@@ -10,15 +10,6 @@ namespace Kickstarter_web
 
     public class DBAccount : Database
     {
-        public void Delete()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void Update()
-        {
-            throw new System.NotImplementedException();
-        }
 
         public bool Insert(Account account, string password)
         {

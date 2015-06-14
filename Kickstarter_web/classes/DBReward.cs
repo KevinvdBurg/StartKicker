@@ -13,10 +13,6 @@ namespace Kickstarter_web
 
     public class DBReward : Database
     {
-        public void Delete()
-        {
-            throw new System.NotImplementedException();
-        }
 
         public bool Insert(Rewards reward, int projectID)
         {
@@ -60,11 +56,6 @@ namespace Kickstarter_web
 
             return resultaat;
 
-        }
-
-        public void Update()
-        {
-            throw new System.NotImplementedException();
         }
 
         public Rewards GetReward(int rewardID)
