@@ -18,13 +18,25 @@ namespace Kickstarter_web
 
         public int PrevReward { get; set; }
 
+        public int ThisReward { get; set; }
+
+        public Rewards(string name, int price, string description, string delivery, int prevReward, int thisReward)
+        {
+            Name = name;
+            Price = price;
+            Description = description;
+            Delivery = delivery;
+            PrevReward = prevReward;
+            ThisReward = thisReward;
+        }
+
         public Rewards(string name, int price, string description, string delivery, int prevReward)
         {
             Name = name;
             Price = price;
             Description = description;
             Delivery = delivery;
-            PrevReward = prevReward;    
+            PrevReward = prevReward;
         }
 
         public Rewards(string name, int price, string description, string delivery)

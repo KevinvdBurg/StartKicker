@@ -32,7 +32,7 @@
                 <tr>
                     <td>Prev Reward</td>
                     <td>
-                        <asp:DropDownList ID="rew_prevreward" runat="server" DataSourceID="Rewards" DataTextField="Name" DataValueField="PrevReward"></asp:DropDownList>
+                        <asp:DropDownList ID="rew_prevreward" runat="server" DataSourceID="Rewards" DataTextField="Name" DataValueField="ThisReward"></asp:DropDownList>
                         <asp:ObjectDataSource ID="Rewards" runat="server" SelectMethod="GetAllRewards" TypeName="Kickstarter_web.Administrator">
                             <SelectParameters>
                                 <asp:QueryStringParameter Name="projectID" QueryStringField="projectID" Type="Int32" />

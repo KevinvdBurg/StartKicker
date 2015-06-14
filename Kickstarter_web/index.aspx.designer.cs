@@ -13,75 +13,21 @@ namespace Kickstarter_web {
     public partial class index2 {
         
         /// <summary>
-        /// backNow1 control.
+        /// randProject control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button backNow1;
+        protected global::System.Web.UI.WebControls.ObjectDataSource randProject;
         
         /// <summary>
-        /// info1 control.
+        /// Repeater_randProject control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button info1;
-        
-        /// <summary>
-        /// backNow2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button backNow2;
-        
-        /// <summary>
-        /// info2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button info2;
-        
-        /// <summary>
-        /// backNow3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button backNow3;
-        
-        /// <summary>
-        /// info3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button info3;
-        
-        /// <summary>
-        /// backNow4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button backNow4;
-        
-        /// <summary>
-        /// info4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button info4;
+        protected global::System.Web.UI.WebControls.Repeater Repeater_randProject;
     }
 }

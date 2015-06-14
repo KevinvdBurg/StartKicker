@@ -23,7 +23,7 @@ namespace Kickstarter_web
             string sql = "";
             if (reward.PrevReward == 0)
             {
-                sql = "INSERT INTO KICKSTARTER_REWARDS (PROJECT_ID, KICKNAME, PRICE, DESCRIPTION, ESTIMATEDDELIVERY, SHIPPINGDETAILS, PREVREWARD_ID) VALUES(:projectID, :kickname, :price ,:description, :esti,:shipdetails)";
+                sql = "INSERT INTO KICKSTARTER_REWARDS (PROJECT_ID, KICKNAME, PRICE, DESCRIPTION, ESTIMATEDDELIVERY, SHIPPINGDETAILS) VALUES(:projectID, :kickname, :price ,:description, :esti,:shipdetails)";
             }
             else
             {
@@ -86,7 +86,8 @@ namespace Kickstarter_web
                         Convert.ToInt32(reader["PRICE"]),
                         Convert.ToString(reader["DESCRIPTION"]),
                         Convert.ToString(reader["ESTIMATEDDELIVERY"]),
-                        Convert.ToInt32(reader["PREVREWARD_ID"]));
+                        Convert.ToInt32(reader["PREVREWARD_ID"]),
+                        Convert.ToInt32(reader["REWARD_ID"]));
                       
                     thisRewards = tempReward;
                 }
@@ -121,7 +122,8 @@ namespace Kickstarter_web
                             Convert.ToInt32(reader["PRICE"]),
                             Convert.ToString(reader["DESCRIPTION"]),
                             Convert.ToString(reader["ESTIMATEDDELIVERY"]),
-                            Convert.ToInt32(reader["PREVREWARD_ID"]));
+                            Convert.ToInt32(reader["PREVREWARD_ID"]),
+                            Convert.ToInt32(reader["REWARD_ID"]));
                         allRewards.Add(tempReward);
                     }
                        

@@ -8,19 +8,19 @@
         <div class="col-md-8">
             <table class="table">
                 <tr>
-                    <td>Name</td>
+                    <td>Name*</td>
                     <td>
                         <asp:TextBox ID="regi_name" runat="server"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
-                    <td>Email</td>
+                    <td>Email*</td>
                     <td>
                         <asp:TextBox ID="regi_email" runat="server" TextMode="Email"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
-                    <td>Wachtwoord</td>
+                    <td>Wachtwoord*</td>
                     <td>
                         <asp:TextBox ID="regi_wachtwoord" runat="server"></asp:TextBox>
                     </td>
@@ -56,7 +56,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td>*Mandatory</td>
                     <td>
                         <asp:Button ID="regi_button" runat="server" Text="Registeren" CssClass="btn btn-default" OnClick="regi_button_Click"/>
                     </td>

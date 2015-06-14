@@ -104,9 +104,9 @@ namespace Kickstarter_web
         }
         public List<Project> Get4RandomProjects()
         {
-            string sql = "SELECT p.TITLE, p.SHORTBLURB, p.CATEGORY_ID, c.KICKNAME, p.SUBCATEGORY_ID, p.PROJECT_LOCATION, p.FUNDING_DURATION, p.FUNDING_GOAL, p.PROJECTVIDEO, p.PROJECTDESCRIPTION, p.RISKSANDCHALLENGES, p.PROJECT_ID FROM KICKSTARTER_PROJECT p INNER JOIN KICKSTARTER_CATEGORY c ON c.CATEGORY_ID = p.CATEGORY_ID";
+            string sql = "SELECT p.TITLE, p.SHORTBLURB, p.CATEGORY_ID, c.KICKNAME, p.SUBCATEGORY_ID, p.PROJECT_LOCATION, p.FUNDING_DURATION, p.FUNDING_GOAL, p.PROJECTVIDEO, p.PROJECTDESCRIPTION, p.RISKSANDCHALLENGES, p.PROJECT_ID FROM KICKSTARTER_PROJECT p INNER JOIN KICKSTARTER_CATEGORY c ON c.CATEGORY_ID = p.CATEGORY_ID ORDER BY dbms_random.value";
             List<Project> listProjects = new List<Project>();
-
+            int count = 0;
             try
             {
                 this.Connect();
@@ -114,25 +114,27 @@ namespace Kickstarter_web
                 OracleDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {
-                    while (reader.Read())
-                    {
-                        Category cat = new Category(
+
+                    while (reader.Read() && count < 4)
+                        {
+                            Category cat = new Category(
                             Convert.ToInt32(reader["CATEGORY_ID"]),
                             Convert.ToString(reader["KICKNAME"]));
-                        Project tempProject = new Project(
-                            Convert.ToString(reader["TITLE"]),
-                            Convert.ToString(reader["SHORTBLURB"]),
-                            Convert.ToString(reader["PROJECT_LOCATION"]),
-                            Convert.ToString(reader["FUNDING_DURATION"]),
-                            Convert.ToInt32(reader["FUNDING_GOAL"]),
-                            Convert.ToString(reader["PROJECTVIDEO"]),
-                            Convert.ToString(reader["PROJECTDESCRIPTION"]),
-                            Convert.ToString(reader["RISKSANDCHALLENGES"]),
-                            cat,
-                            Convert.ToString(reader["SUBCATEGORY_ID"]),
-                            Convert.ToInt32(reader["PROJECT_ID"]));
-                        listProjects.Add(tempProject);
-                    }
+                            Project tempProject = new Project(
+                                Convert.ToString(reader["TITLE"]),
+                                Convert.ToString(reader["SHORTBLURB"]),
+                                Convert.ToString(reader["PROJECT_LOCATION"]),
+                                Convert.ToString(reader["FUNDING_DURATION"]),
+                                Convert.ToInt32(reader["FUNDING_GOAL"]),
+                                Convert.ToString(reader["PROJECTVIDEO"]),
+                                Convert.ToString(reader["PROJECTDESCRIPTION"]),
+                                Convert.ToString(reader["RISKSANDCHALLENGES"]),
+                                cat,
+                                Convert.ToString(reader["SUBCATEGORY_ID"]),
+                                Convert.ToInt32(reader["PROJECT_ID"]));
+                            listProjects.Add(tempProject);
+                            count++;
+                        }
                 }
             }
             catch (OracleException e)

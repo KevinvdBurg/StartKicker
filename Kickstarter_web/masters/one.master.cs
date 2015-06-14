@@ -22,7 +22,9 @@ namespace Kickstarter_web
             }
             else
             {
-                menuOpties.InnerHtml = "<li><a href=\"/pages/dashboard.aspx\">Dashboard</a></li>";
+
+                Account account = administrator.getAccountDetails(Convert.ToInt32(Session[myKeys.key_accountID]), Convert.ToString(Session[myKeys.key_rights]));
+                menuOpties.InnerHtml = "<li><a href=\"#\">" + account.Name + "</a></li><li><a href=\"/pages/dashboard.aspx\">Dashboard</a></li>";
             }
         }
 

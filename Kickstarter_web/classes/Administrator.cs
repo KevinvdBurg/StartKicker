@@ -44,6 +44,12 @@ namespace Kickstarter_web
             return this.dbProject.GetAllProjects();
         }
 
+        public List<Project> Get4RandomProject()
+        {
+
+            return this.dbProject.Get4RandomProjects();
+        }
+
         public List<Project> GetallFromAccountProjects(int accountID)
         {
 
