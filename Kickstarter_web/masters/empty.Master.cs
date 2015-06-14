@@ -48,13 +48,13 @@ namespace Kickstarter_web
     public static class MessageBox
     {
         /// <summary>
-        /// The show.
+        /// This will show a default MessageBox like In Windows Form, exept it will use a javascript Alert() Function
         /// </summary>
         /// <param name="Page">
-        /// The page.
+        /// The current page the messagebox needs to show up in.
         /// </param>
         /// <param name="Message">
-        /// The message.
+        /// The message it needs to display
         /// </param>
         public static void Show(this Page Page, string Message)
         {

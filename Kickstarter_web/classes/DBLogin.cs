@@ -1,9 +1,9 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="DBLogin.cs" company="">
+// <copyright file="DBLogin.cs" company="StartKicker">
 //   
 // </copyright>
 // <summary>
-//   The db login.
+//   All the DB connections that are needed to login someone in and to get all the relative infromation for a account
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -20,21 +20,21 @@ namespace Kickstarter_web
     using Oracle.DataAccess.Client;
 
     /// <summary>
-    /// The db login.
+    /// The Login methods that are needed to log someone in
     /// </summary>
     public class DBLogin : Database
     {
         /// <summary>
-        /// The login.
+        /// It will logs someone in the system
         /// </summary>
         /// <param name="email">
-        /// The email.
+        /// An email 
         /// </param>
         /// <param name="password">
-        /// The password.
+        /// An password
         /// </param>
         /// <returns>
-        /// The <see cref="Account"/>.
+        /// An Account Object if an account is found. Otherwise is wil return null
         /// </returns>
         public Account Login(string email, string password)
         {

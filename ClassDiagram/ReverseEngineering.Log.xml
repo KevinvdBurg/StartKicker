@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2015-06-14T20:56:55" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web' -  (Package)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Category' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Medium" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Project' -  (Class)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Project::Category' -  (Property)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Project::FundingDuration' -  (Property)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Project::FundingGoal' -  (Property)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Project::Project' -  (Operation)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Project::Project::category' -  (Parameter)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Project::Project::fundingDuration' -  (Parameter)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Project::Project::fundingGoal' -  (Parameter)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Project::Project::projectDescription' -  (Parameter)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Project::Project::projectID' -  (Parameter)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Project::Project::projectLocation' -  (Parameter)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Project::Project::projectVideo' -  (Parameter)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Project::Project::risksAndChallenges' -  (Parameter)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Project::Project::shortBlurb' -  (Parameter)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Project::Project::subCategory' -  (Parameter)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Project::Project::title' -  (Parameter)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Project::ProjectDescription' -  (Property)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Project::ProjectID' -  (Property)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Project::ProjectLocation' -  (Property)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Project::ProjectVideo' -  (Property)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Project::RisksAndChallenges' -  (Property)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Project::ShortBlurb' -  (Property)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Project::SubCategory' -  (Property)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Project::Title' -  (Property)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Medium" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Rewards' -  (Class)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Rewards::Delivery' -  (Property)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Rewards::Description' -  (Property)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Rewards::Name' -  (Property)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Rewards::PrevReward' -  (Property)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Rewards::Price' -  (Property)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Rewards::Rewards' -  (Operation)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Rewards::Rewards::delivery' -  (Parameter)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Rewards::Rewards::description' -  (Parameter)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Rewards::Rewards::name' -  (Parameter)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Rewards::Rewards::prevReward' -  (Parameter)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Rewards::Rewards::price' -  (Parameter)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Rewards::Rewards::thisReward' -  (Parameter)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::Rewards::ThisReward' -  (Property)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Medium" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::SubCategory' -  (Class)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::SubCategory::Category' -  (Property)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::SubCategory::ID' -  (Property)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::SubCategory::Name' -  (Property)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::SubCategory::SubCategory' -  (Operation)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::SubCategory::SubCategory::category' -  (Parameter)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::SubCategory::SubCategory::id' -  (Parameter)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ClassDiagram::Kickstarter_web::SubCategory::SubCategory::name' -  (Parameter)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Integer' -  (PrimitiveType)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ClassDiagram::Kickstarter_web::SubCategory to ClassDiagram::Kickstarter_web::Category (Association)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ClassDiagram::Kickstarter_web::Project to ClassDiagram::Kickstarter_web::Category (Association)" />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="High" Text="(3) type(s) fully reverse engineered." />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="High" Text="(1) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2015-06-14T20:57:36" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>
