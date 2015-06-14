@@ -4,99 +4,106 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Kickstarter_web;
-using Xunit;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Kickstarter_web.Tests
 {
+    [TestClass()]
     public class AdministratorTests
     {
-        [Fact()]
+        [TestMethod()]
         public void LoginTest()
         {
-            Assert.True(false, "not implemented yet");
+            Assert.Fail();
         }
 
-        [Fact()]
+        [TestMethod()]
         public void getAccountDetailsTest()
         {
-            Assert.True(false, "not implemented yet");
+            Assert.Fail();
         }
 
-        [Fact()]
+        [TestMethod()]
         public void RegisteerAccountTest()
         {
-            Assert.True(false, "not implemented yet");
+            Assert.Fail();
         }
 
-        [Fact()]
+        [TestMethod()]
         public void CreeerProjectTest()
         {
-            Assert.True(false, "not implemented yet");
+            Assert.Fail();
         }
 
-        [Fact()]
+        [TestMethod()]
         public void GetallProjectTest()
         {
-            Assert.True(false, "not implemented yet");
+            Assert.Fail();
         }
 
-        [Fact()]
+        [TestMethod()]
         public void Get4RandomProjectTest()
         {
-            Assert.True(false, "not implemented yet");
+            Assert.Fail();
         }
 
-        [Fact()]
+        [TestMethod()]
         public void GetallFromAccountProjectsTest()
         {
-            Assert.True(false, "not implemented yet");
+            Assert.Fail();
         }
 
-        [Fact()]
+        [TestMethod()]
         public void GetProjectTest()
         {
-            Assert.True(false, "not implemented yet");
+            Assert.Fail();
         }
 
-        [Fact()]
+        [TestMethod()]
         public void GetCategoriesTest()
         {
-            Assert.True(false, "not implemented yet");
+            Assert.Fail();
         }
 
-        [Fact()]
+        [TestMethod()]
         public void GetSubCategoriesTest()
         {
-            Assert.True(false, "not implemented yet");
+            Assert.Fail();
         }
 
-        [Fact()]
+        [TestMethod()]
         public void BackProjectTest()
         {
-            Assert.True(false, "not implemented yet");
+            Assert.Fail();
         }
 
-        [Fact()]
+        [TestMethod()]
         public void GetMyBackingsTest()
         {
-            Assert.True(false, "not implemented yet");
+            Assert.Fail();
         }
 
-        [Fact()]
+        [TestMethod()]
         public void GetRewardTest()
         {
-            Assert.True(false, "not implemented yet");
+            Assert.Fail();
         }
 
-        [Fact()]
+        [TestMethod()]
         public void GetAllRewardsTest()
         {
-            Assert.True(false, "not implemented yet");
+            Assert.Fail();
         }
 
-        [Fact()]
+        [TestMethod()]
         public void InsertRewardTest()
         {
-            Assert.True(false, "not implemented yet");
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void getAccountDetailsTest1()
+        {
+            Assert.Fail();
         }
     }
 }
