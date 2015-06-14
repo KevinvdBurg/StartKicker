@@ -1,9 +1,9 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="DBAccount.cs" company="">
+// <copyright file="DBAccount.cs" company="StartKicker">
 //   
 // </copyright>
 // <summary>
-//   The db account.
+//   This class is used to create a account that is used for the Website.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -20,31 +20,30 @@ using Oracle.DataAccess.Client;
 namespace Kickstarter_web
 {
     /// <summary>
-    /// The db account.
+    /// A Connection to the Database to Select, Insert, Update or Delete a record(s)
     /// </summary>
     public class DBAccount : Database
     {
         /// <summary>
-        /// The insert.
+        /// A insert Method that creates an account
         /// </summary>
         /// <param name="account">
-        /// The account.
+        /// A Account Object that stores all the details for that account
         /// </param>
         /// <param name="password">
-        /// The password.
+        /// The password for the New Account
         /// </param>
         /// <returns>
-        /// The <see cref="bool"/>.
+        /// Returns True or False Depending on if it succeeds
         /// </returns>
         public bool Insert(Account account, string password)
         {
             bool resultaat = false;
 
-            // string sql = "SELECT email, phone, kickname, picture, biography, kicklocation, timezone, vanity_url, rights FROM KICKSTARTER_ACCOUNT WHERE ACCOUNT_ID = :ACCOUNT_ID";
             string sql = "INSERT INTO KICKSTARTER_ACCOUNT(EMAIL, PHONE, KICKPASSWORD, KICKNAME, PICTURE, BIOGRAPHY, KICKLOCATION, TIMEZONE, VANITY_URL, RIGHTS) VALUES (:EMAIL ,:PHONE, :KICKPASSWORD, :KICKNAME,:PICTURE,:BIOGRAPHY,:KICKLOCATION,:TIMEZONE,:VANITY_URL,:RIGHTS)";
             try
             {
-                
+                //Connects to the Database class
                 this.Connect();
                 OracleCommand cmd = new OracleCommand(sql, this.connection);
                 cmd.Parameters.Add(new OracleParameter("EMAIL",  account.Email.ToLower()));

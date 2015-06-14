@@ -1,9 +1,10 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Category.cs" company="">
+// <copyright file="Category.cs" company="StartKicker">
 //   
 // </copyright>
 // <summary>
-//   The category.
+//   The Category for a Project. Here will be stored the ID and the Name of that category.
+//   It is used for example the Dropdownlists
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -18,7 +19,7 @@ using System.ComponentModel;
 namespace Kickstarter_web
 {
     /// <summary>
-    /// The category.
+    /// The Category for a project
     /// </summary>
     public class Category
     {
@@ -36,10 +37,10 @@ namespace Kickstarter_web
         /// Initializes a new instance of the <see cref="Category"/> class.
         /// </summary>
         /// <param name="id">
-        /// The id.
+        /// The id from the Category
         /// </param>
         /// <param name="name">
-        /// The name.
+        /// The name from the Category
         /// </param>
         public Category(int id, string name)
         {

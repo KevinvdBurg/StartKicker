@@ -1,9 +1,9 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Admin.cs" company="">
+// <copyright file="Admin.cs" company="StartKicker">
 //   
 // </copyright>
 // <summary>
-//   The admin.
+//   If an account is an Admin he will get extra info
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 

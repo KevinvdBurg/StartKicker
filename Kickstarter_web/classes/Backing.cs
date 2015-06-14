@@ -1,9 +1,9 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Backing.cs" company="">
+// <copyright file="Backing.cs" company="StartKicker">
 //   
 // </copyright>
 // <summary>
-//   The backing.
+//   This object will stored all the inforamtion from a backing
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -46,16 +46,16 @@ namespace Kickstarter_web
         /// Initializes a new instance of the <see cref="Backing"/> class.
         /// </summary>
         /// <param name="pledgeAmount">
-        /// The pledge amount.
+        /// The pledge amount of the backing
         /// </param>
         /// <param name="betaald">
-        /// The betaald.
+        /// A bool that set if the backing is payed
         /// </param>
         /// <param name="projectId">
-        /// The project id.
+        /// The Project object for where the backing is made for
         /// </param>
         /// <param name="accountId">
-        /// The account id.
+        /// The AccountID from the account who is making the Backing
         /// </param>
         public Backing(int pledgeAmount, bool betaald, Project projectId, int accountId)
         {

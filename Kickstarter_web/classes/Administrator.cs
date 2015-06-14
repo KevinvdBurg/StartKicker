@@ -1,9 +1,9 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Administrator.cs" company="">
+// <copyright file="Administrator.cs" company="StartKicker">
 //   
 // </copyright>
 // <summary>
-//   The administrator.
+//   All the functions for the website. You My not call the DB* classes directly. In state class this class
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -46,13 +46,13 @@ namespace Kickstarter_web
         private DBReward dbReward = new DBReward();
 
         /// <summary>
-        /// The login.
+        /// Login method to get access to your dashboard
         /// </summary>
         /// <param name="email">
-        /// The email.
+        /// An email
         /// </param>
         /// <param name="password">
-        /// The password.
+        /// A password
         /// </param>
         /// <returns>
         /// The <see cref="Account"/>.
@@ -64,13 +64,13 @@ namespace Kickstarter_web
         }
 
         /// <summary>
-        /// The get account details.
+        /// The gets account details Like Name, Location, Etc...
         /// </summary>
         /// <param name="account_id">
-        /// The account_id.
+        /// An Account ID
         /// </param>
         /// <param name="rights">
-        /// The rights.
+        /// The rights of that account
         /// </param>
         /// <returns>
         /// The <see cref="Account"/>.
@@ -82,16 +82,16 @@ namespace Kickstarter_web
         }
 
         /// <summary>
-        /// The registeer account.
+        /// Registeers an account to the database
         /// </summary>
         /// <param name="account">
-        /// The account.
+        /// An Account that with all the parameter
         /// </param>
         /// <param name="password">
-        /// The password.
+        /// The password for that account. This is to prevent to SQL INjest
         /// </param>
         /// <returns>
-        /// The <see cref="bool"/>.
+        /// If the Registeer is succesfull it returns True else False.
         /// </returns>
         public bool RegisteerAccount(Account account, string password)
         {
@@ -99,16 +99,16 @@ namespace Kickstarter_web
         }
 
         /// <summary>
-        /// The creeer project.
+        /// Creates an Project
         /// </summary>
         /// <param name="project">
-        /// The project.
+        /// The Project with all its parameters
         /// </param>
         /// <param name="accountID">
-        /// The account id.
+        /// An Account ID
         /// </param>
         /// <returns>
-        /// The <see cref="bool"/>.
+        /// If the Create is succesfull it returns True else False.
         /// </returns>
         public bool CreeerProject(Project project, int accountID)
         {
@@ -116,37 +116,36 @@ namespace Kickstarter_web
         }
 
         /// <summary>
-        /// The getall project.
+        /// It gets all the projects that are in the DB.
         /// </summary>
         /// <returns>
-        /// The <see cref="List"/>.
+        /// A List of all the Projects.
         /// </returns>
         public List<Project> GetallProject()
         {
-
             return this.dbProject.GetAllProjects();
         }
 
         /// <summary>
-        /// The get 4 random project.
+        /// This gets 4 Random projects from the DB. It is mostly used on the front page
         /// </summary>
         /// <returns>
-        /// The <see cref="List"/>.
+        /// A List of 4 Projects 
         /// </returns>
         public List<Project> Get4RandomProject()
         {
-
             return this.dbProject.Get4RandomProjects();
         }
 
         /// <summary>
-        /// The getall from account projects.
+        /// Just like GetAllProjects:"It gets all the projects that are in the DB"
+        /// Exepts it returns it for an specific account
         /// </summary>
         /// <param name="accountID">
-        /// The account id.
+        /// An Account ID
         /// </param>
         /// <returns>
-        /// The <see cref="List"/>.
+        /// A List of the Account the Projects.
         /// </returns>
         public List<Project> GetallFromAccountProjects(int accountID)
         {
@@ -155,37 +154,39 @@ namespace Kickstarter_web
         }
 
         /// <summary>
-        /// The get project.
+        /// Gets a single project for the DB
         /// </summary>
         /// <param name="projectID">
         /// The project id.
         /// </param>
         /// <returns>
-        /// The <see cref="Project"/>.
+        /// Returns the Project object for a Project
         /// </returns>
         public Project GetProject(int projectID)
         {
-
             return this.dbProject.GetProject(projectID);
         }
 
         /// <summary>
-        /// The get categories.
+        /// Gets categories for the Projects.
         /// </summary>
         /// <returns>
-        /// The <see cref="List"/>.
+        /// A List of all the Categories in the DB
+        /// 
         /// </returns>
         public List<Category> GetCategories()
         {
             return this.dbProject.GetCategories();
         }
 
-        // Not needed  -- is should have
+
+        // Not needed
         /// <summary>
-        /// The get sub categories.
+        /// Gets Sub Categories for the Projects.
         /// </summary>
         /// <returns>
         /// The <see cref="List"/>.
+        /// A List of all the Sub Categories in the DB
         /// </returns>
         public List<SubCategory> GetSubCategories()
         {
@@ -193,19 +194,19 @@ namespace Kickstarter_web
         }
 
         /// <summary>
-        /// The back project.
+        /// Backs a project with a specik amount. 
         /// </summary>
         /// <param name="projectId">
-        /// The project id.
+        /// A Project ID
         /// </param>
         /// <param name="accountId">
-        /// The account id.
+        /// The Backers account ID
         /// </param>
         /// <param name="backamount">
-        /// The backamount.
+        /// The pledge amount that is in Roundend amount. It is not posible to back 0.2 euro for example.
         /// </param>
         /// <returns>
-        /// The <see cref="bool"/>.
+        /// If the back is succesfull it will return True, Else it will return False
         /// </returns>
         public bool BackProject(string projectId, int accountId, int backamount)
         {
@@ -213,13 +214,13 @@ namespace Kickstarter_web
         }
 
         /// <summary>
-        /// The get my backings.
+        /// Gets all backings from a account. 
         /// </summary>
         /// <param name="accountID">
-        /// The account id.
+        /// An AccountID from the requesting account
         /// </param>
         /// <returns>
-        /// The <see cref="List"/>.
+        /// A list of all the backings from that account 
         /// </returns>
         public List<Backing> GetMyBackings(int accountID)
         {
@@ -227,13 +228,13 @@ namespace Kickstarter_web
         }
 
         /// <summary>
-        /// The get reward.
+        /// Gets a single reward based on that ID
         /// </summary>
         /// <param name="rewardID">
-        /// The reward id.
+        /// The Reward Id from that specifc reward
         /// </param>
         /// <returns>
-        /// The <see cref="Rewards"/>.
+        /// A single Reward Object where all the details are stored
         /// </returns>
         public Rewards GetReward(int rewardID)
         {
@@ -241,13 +242,13 @@ namespace Kickstarter_web
         }
 
         /// <summary>
-        /// The get all rewards.
+        /// Gets all the Rewards for the given Project
         /// </summary>
         /// <param name="projectID">
-        /// The project id.
+        /// The Project ID where you want the Rewards from
         /// </param>
         /// <returns>
-        /// The <see cref="List"/>.
+        /// A List of all the Rewards from the given Project 
         /// </returns>
         public List<Rewards> GetAllRewards(int projectID)
         {
@@ -255,16 +256,16 @@ namespace Kickstarter_web
         }
 
         /// <summary>
-        /// The insert reward.
+        /// Insert a New Reward for the given Project
         /// </summary>
         /// <param name="reward">
-        /// The reward.
+        /// A Reward object where all the details are stored from a reward
         /// </param>
         /// <param name="projectID">
-        /// The project id.
+        /// The project ID where you want to insert the reward to
         /// </param>
         /// <returns>
-        /// The <see cref="bool"/>.
+        /// If the Insert is succesfull it returns True, Else it returns False
         /// </returns>
         public bool InsertReward(Rewards reward, int projectID)
         {

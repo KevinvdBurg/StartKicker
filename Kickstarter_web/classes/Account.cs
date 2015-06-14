@@ -1,9 +1,9 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Account.cs" company="">
+// <copyright file="Account.cs" company="StartKicker">
 //   
 // </copyright>
 // <summary>
-//   The account.
+//   Here are all details for an account
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 

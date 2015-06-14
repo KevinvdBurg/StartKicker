@@ -1,10 +1,4 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masters/LoggedIn.master" AutoEventWireup="true" CodeBehind="addreward.aspx.cs" Inherits="Kickstarter_web.pages.addReward" %>
-<%@ Import Namespace="System.Web.UI.WebControls.WebParts" %>
-<%@ Import Namespace="System.Web.UI" %>
-<%@ Import Namespace="System.Web.UI.WebControls" %>
-<%@ Import Namespace="System.Web.UI.WebControls.Expressions" %>
-<%@ Import Namespace="System.Web.DynamicData" %>
-<%@ Import Namespace="System.Web.UI.WebControls" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="container_jumbo" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="container_bottom" runat="server">
