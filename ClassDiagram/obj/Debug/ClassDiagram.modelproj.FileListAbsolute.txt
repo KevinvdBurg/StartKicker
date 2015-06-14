@@ -1,0 +1,4 @@
+C:\Users\Kevin van der Burg\Documents\GitHub\StartKicker\ClassDiagram\bin\Debug\Kickstarter_web.dll
+C:\Users\Kevin van der Burg\Documents\GitHub\StartKicker\ClassDiagram\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Kevin van der Burg\Documents\GitHub\StartKicker\ClassDiagram\bin\Debug\Kickstarter_web.pdb
+C:\Users\Kevin van der Burg\Documents\GitHub\StartKicker\ClassDiagram\obj\Debug\ClassDiagram.modelprojResolveAssemblyReference.cache
