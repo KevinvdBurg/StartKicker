@@ -133,6 +133,7 @@ namespace Kickstarter_web
         /// <summary>
         /// Initializes a new instance of the <see cref="Project"/> class.
         /// </summary>
+        /// <param name="projectId"></param>
         public Project()
         {
             

@@ -31,19 +31,9 @@ namespace Kickstarter_web.Tests
 
         }
 
+
         [TestMethod()]
         public void BackingTest2()
-        {
-            Project expected = new Project("Title", "Short", "Nl", "12", 10, "video", "descip", "risk", new Category(1, "Art"), "1", 1);
-            Backing backing = new Backing(100, false, new Project("Title", "Short", "Nl", "12", 10, "video", "descip", "risk", new Category(1, "Art"), "1", 1), 1);
-
-            Project actual = backing.ProjectID;
-            Assert.AreEqual(expected, actual, "Backing Project is not right");
-
-        }
-
-        [TestMethod()]
-        public void BackingTest3()
         {
             int expected = 1;
             Backing backing = new Backing(100, false, new Project("Title", "Short", "Nl", "12", 10, "video", "descip", "risk", new Category(1, "Art"), "1", 1), 1);

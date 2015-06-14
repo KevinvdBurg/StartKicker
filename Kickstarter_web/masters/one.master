@@ -24,7 +24,7 @@
             </p>
             <p>
                 Password:
-                <asp:TextBox ID="tb_login_password" runat="server" ></asp:TextBox>
+                <asp:TextBox ID="tb_login_password" runat="server" TextMode="Password"></asp:TextBox>
             </p>
             <p>
                 <asp:Button ID="btn_login" runat="server" Text="Inloggen" class="btn btn-default" OnClick="btn_login_Click"/>

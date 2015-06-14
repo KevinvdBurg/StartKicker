@@ -103,16 +103,6 @@ namespace Kickstarter_web.Tests
         [TestMethod()]
         public void ProjectTest9()
         {
-            Category expected = new Category(1, "Art");
-            Project project = new Project("Title", "Short", "Nl", "12", 10, "video", "descip", "risk", new Category(1, "Art"), "1", 1);
-
-            Category actual = project.Category;
-            Assert.AreEqual(expected, actual, "Project Category is not right");
-        }
-
-        [TestMethod()]
-        public void ProjectTest10()
-        {
             int expected = 1;
             Project project = new Project("Title", "Short", "Nl", "12", 10, "video", "descip", "risk", new Category(1, "Art"), "1", 1);
 
