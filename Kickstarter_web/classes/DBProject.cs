@@ -1,9 +1,9 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="DBProject.cs" company="">
+// <copyright file="DBProject.cs" company="StartKicker">
 //   
 // </copyright>
 // <summary>
-//   The db project.
+//   All the Methods needed to get all the projects details
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -22,21 +22,21 @@ namespace Kickstarter_web
     using System.Collections.Generic;
 
     /// <summary>
-    /// The db project.
+    /// All the methods needed for the dbProject
     /// </summary>
     public class DBProject : Database
     {
         /// <summary>
-        /// The insert.
+        /// Insert a new project into the database
         /// </summary>
         /// <param name="project">
-        /// The project.
+        /// A Project object that contains all the details for the project
         /// </param>
         /// <param name="accountID">
-        /// The account id.
+        /// The account id form the creator of the project
         /// </param>
         /// <returns>
-        /// The <see cref="bool"/>.
+        /// If its is succesfull is will return True, Else False
         /// </returns>
         public bool Insert(Project project, int accountID)
         {
@@ -76,10 +76,10 @@ namespace Kickstarter_web
         }
 
         /// <summary>
-        /// The get all projects.
+        /// The get all projects from the Database
         /// </summary>
         /// <returns>
-        /// The <see cref="List"/>.
+        /// A list of all the projects in the database
         /// </returns>
         public List<Project> GetAllProjects()
         {
@@ -127,10 +127,10 @@ namespace Kickstarter_web
         }
 
         /// <summary>
-        /// The get 4 random projects.
+        /// The get 4 random projects from the database.
         /// </summary>
         /// <returns>
-        /// The <see cref="List"/>.
+        /// A list of 4 random projects from the database
         /// </returns>
         public List<Project> Get4RandomProjects()
         {
@@ -183,10 +183,10 @@ namespace Kickstarter_web
         /// The get all projects from account.
         /// </summary>
         /// <param name="accountID">
-        /// The account id.
+        /// The accountID from the whitch all the project needs to bee
         /// </param>
         /// <returns>
-        /// The <see cref="List"/>.
+        /// A List of all the projects from an account
         /// </returns>
         public List<Project> GetAllProjectsFromAccount(int accountID)
         {
@@ -236,13 +236,13 @@ namespace Kickstarter_web
         }
 
         /// <summary>
-        /// The get project.
+        /// Gets a Single project from the database
         /// </summary>
         /// <param name="projectID">
-        /// The project id.
+        /// The project id of that project.
         /// </param>
         /// <returns>
-        /// The <see cref="Project"/>.
+        /// A Project Object with all the infromation
         /// </returns>
         public Project GetProject(int projectID)
         {
@@ -288,10 +288,10 @@ namespace Kickstarter_web
         }
 
         /// <summary>
-        /// The get categories.
+        /// Gets all the categories 
         /// </summary>
         /// <returns>
-        /// The <see cref="List"/>.
+        /// A List of all the Categories
         /// </returns>
         public List<Category> GetCategories()
         {
@@ -325,10 +325,10 @@ namespace Kickstarter_web
         }
 
         /// <summary>
-        /// The get sub categories.
+        ///  Gets all the sub categories 
         /// </summary>
         /// <returns>
-        /// The <see cref="List"/>.
+        ///A List of all the SUB Categories
         /// </returns>
         public List<SubCategory> GetSubCategories()
         {
@@ -363,55 +363,19 @@ namespace Kickstarter_web
         }
 
         /// <summary>
-        /// The get category name.
-        /// </summary>
-        /// <param name="id">
-        /// The id.
-        /// </param>
-        /// <returns>
-        /// The <see cref="string"/>.
-        /// </returns>
-        public string GetCategoryName(int id)
-        {
-            string sql = "SELECT KICKNAME FROM KICKSTARTER_CATEGORY WHERE CATEGORY_ID = :id";
-            string result = string.Empty;
-            try
-            {
-                this.Connect();
-                OracleCommand cmd = new OracleCommand(sql, this.connection);
-                cmd.Parameters.Add(new OracleParameter("id", id));
-                OracleDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    result = Convert.ToString(reader["KICKNAME"]);
-                }
-            }
-            catch (OracleException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                this.connection.Close();
-            }
-
-            return result;
-        }
-
-        /// <summary>
-        /// The back project.
+        /// This method will back the given project
         /// </summary>
         /// <param name="projectId">
-        /// The project id.
+        /// The project ID from the project
         /// </param>
         /// <param name="accountId">
-        /// The account id.
+        /// The account id from the one whos backing the account
         /// </param>
         /// <param name="backamount">
-        /// The backamount.
+        /// The Plegde amount in a 'int'
         /// </param>
         /// <returns>
-        /// The <see cref="bool"/>.
+        /// If its is succesfull is will return True, Else False
         /// </returns>
         public bool BackProject(string projectId, int accountId, int backamount)
         {
@@ -431,8 +395,6 @@ namespace Kickstarter_web
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-
-                // throw;
             }
             finally
             {
@@ -443,13 +405,13 @@ namespace Kickstarter_web
         }
 
         /// <summary>
-        /// The my backings.
+        /// Get all backings from a given account
         /// </summary>
         /// <param name="accountId">
         /// The account id.
         /// </param>
         /// <returns>
-        /// The <see cref="List"/>.
+        /// A list of all the backings for a account
         /// </returns>
         public List<Backing> MyBackings(int accountId)
         {

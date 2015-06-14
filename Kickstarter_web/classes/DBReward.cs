@@ -1,9 +1,9 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="DBReward.cs" company="">
+// <copyright file="DBReward.cs" company="StartKicker">
 //   
 // </copyright>
 // <summary>
-//   The db reward.
+//   Here will be all the DB Connection from a reward
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -23,21 +23,21 @@ namespace Kickstarter_web
     using Oracle.DataAccess.Client;
 
     /// <summary>
-    /// The db reward.
+    /// All methods for a Reward
     /// </summary>
     public class DBReward : Database
     {
         /// <summary>
-        /// The insert.
+        /// Insert a reward to an account
         /// </summary>
         /// <param name="reward">
-        /// The reward.
+        /// A reward Object where all the data is stored for that reward
         /// </param>
         /// <param name="projectID">
-        /// The project id.
+        /// The project id from the project the reward it needs to add
         /// </param>
         /// <returns>
-        /// The <see cref="bool"/>.
+        /// If its is succesfull is will return True, Else False
         /// </returns>
         public bool Insert(Rewards reward, int projectID)
         {
@@ -85,13 +85,13 @@ namespace Kickstarter_web
         }
 
         /// <summary>
-        /// The get reward.
+        /// Gets a Specific Reward.
         /// </summary>
         /// <param name="rewardID">
-        /// The reward id.
+        /// The reward id for that reward
         /// </param>
         /// <returns>
-        /// The <see cref="Rewards"/>.
+        /// A Reward Object that contans all the data from a Reward
         /// </returns>
         public Rewards GetReward(int rewardID)
         {
@@ -131,13 +131,13 @@ namespace Kickstarter_web
         }
 
         /// <summary>
-        /// The get all rewards per project.
+        /// Gets all the Rewards form a given Project
         /// </summary>
         /// <param name="projectID">
         /// The project id.
         /// </param>
         /// <returns>
-        /// The <see cref="List"/>.
+        /// A List of Rewards
         /// </returns>
         public List<Rewards> GetAllRewardsPerProject(int projectID)
         {

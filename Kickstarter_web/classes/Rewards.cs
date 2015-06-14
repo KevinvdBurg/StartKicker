@@ -1,9 +1,9 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Rewards.cs" company="">
+// <copyright file="Rewards.cs" company="StartKicker">
 //   
 // </copyright>
 // <summary>
-//   The rewards.
+//   All Data from a Reward
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -18,7 +18,7 @@ using System.ComponentModel;
 namespace Kickstarter_web
 {
     /// <summary>
-    /// The rewards.
+    /// The reward object where all the data is stored.
     /// </summary>
     public class Rewards
     {
@@ -54,6 +54,7 @@ namespace Kickstarter_web
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Rewards"/> class.
+        /// If all the information is Known
         /// </summary>
         /// <param name="name">
         /// The name.
@@ -85,6 +86,7 @@ namespace Kickstarter_web
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Rewards"/> class.
+        /// If its own ID is not known
         /// </summary>
         /// <param name="name">
         /// The name.
@@ -112,6 +114,7 @@ namespace Kickstarter_web
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Rewards"/> class.
+        /// If its own ID is not known or its prev reward
         /// </summary>
         /// <param name="name">
         /// The name.

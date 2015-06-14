@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="SessionKey.cs" company="">
+// <copyright file="SessionKey.cs" company="StartKicker">
 //   
 // </copyright>
 // <summary>
@@ -17,8 +17,8 @@ using System.Web;
 namespace Kickstarter_web.classes
 {
     /// <summary>
-    /// The my keys.
-    /// </summary>
+    /// All the Sesion Keys a Will be stored here
+    /// </summary> 
     public sealed class myKeys
     {
         /// <summary>
@@ -30,12 +30,12 @@ namespace Kickstarter_web.classes
         }
 
         /// <summary>
-        /// The key_account id.
+        /// The SesionKey: key_account id.
         /// </summary>
         public static readonly string key_accountID = "accountID";
 
         /// <summary>
-        /// The key_rights.
+        /// The SesionKey: key_rights.
         /// </summary>
         public static readonly string key_rights = "rights";
     }

@@ -45,8 +45,6 @@ namespace Kickstarter_web.pages
         {
             string projectString = null;
             string value = Session[myKeys.key_accountID] + string.Empty;
-
-            
         }
 
         /// <summary>

@@ -10,7 +10,7 @@
   <Class Name="Kickstarter_web.Account">
     <Position X="7" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAACIAAAAABgIAAAQAAAAAAAACAAAAIAAAAEA=</HashCode>
+      <HashCode>AAAAgAAAACIAAAAABgIAAAQAAAAAAAAAAAAAIAAAAEA=</HashCode>
       <FileName>classes\Account.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -24,33 +24,23 @@
   <Class Name="Kickstarter_web.DBAccount">
     <Position X="2.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>classes\DBAccount.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Kickstarter_web.Backing">
     <Position X="4.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAACgAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAgAAAgAABAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>classes\Backing.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="DBBacking" />
-      <Property Name="Project" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="Kickstarter_web.Project">
     <Position X="6.5" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAEAACoBgIEAAAAAAAAAAAAAAAAAAAABAAAAAAkA=</HashCode>
+      <HashCode>ABAAAEAAAABgIEAAAAAAAAAADAAAAAAAAABAAAAACgA=</HashCode>
       <FileName>classes\Project.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="DBProject" />
-      <Property Name="Rewards" />
-      <Property Name="Account" />
-      <Property Name="Content" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="Kickstarter_web.DBBacking">
     <Position X="2.75" Y="2.25" Width="1.5" />
@@ -62,47 +52,39 @@
   <Class Name="Kickstarter_web.DBProject">
     <Position X="2.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAEAAAAEAAQIAQIAEAAAAAQAAAAAAAgAAAAAIAAA=</HashCode>
       <FileName>classes\DBProject.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Kickstarter_web.Rewards">
     <Position X="6.5" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQQgAAAAAAAgAAQAAAAAAAAAEAAAgAgAAAg=</HashCode>
+      <HashCode>AAAAAAAAAQAgAAAAAAAAAAQAAAAAAAAAkAAAAAAAAAg=</HashCode>
       <FileName>classes\Rewards.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="PrevReward" />
-      <Property Name="DBReward" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="Kickstarter_web.DBReward">
     <Position X="2.75" Y="8.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAEAEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>classes\DBReward.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Kickstarter_web.Category">
     <Position X="9.25" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAACAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>classes\Category.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Project" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="Kickstarter_web.SubCategory">
     <Position X="9.25" Y="9" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAACAQAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAQAAAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>classes\SubCategory.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Category" />
-      <Property Name="Project" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Kickstarter_web.Content">
@@ -115,25 +97,18 @@
       <Property Name="Pages" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Kickstarter_web.Pages">
-    <Position X="11.75" Y="4.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>classes\Pages.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Kickstarter_web.Administrator">
     <Position X="12" Y="9.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <HashCode>AAAAAAEAABECEgAEAYAEBAABAQAAAMAAAgAQAAEACAA=</HashCode>
       <FileName>classes\Administrator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Kickstarter_web.DBLogin">
     <Position X="9.75" Y="12" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
-      <FileName>DBLogin.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAEAAAAA=</HashCode>
+      <FileName>classes\DBLogin.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

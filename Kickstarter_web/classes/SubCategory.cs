@@ -1,9 +1,9 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="SubCategory.cs" company="">
+// <copyright file="SubCategory.cs" company="StartKicker">
 //   
 // </copyright>
 // <summary>
-//   The sub category.
+//   All the data from the Subcategory will be stored in this class
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -18,7 +18,7 @@ using System.ComponentModel;
 namespace Kickstarter_web
 {
     /// <summary>
-    /// The sub category.
+    /// All SubCategory data 
     /// </summary>
     public class SubCategory
     {

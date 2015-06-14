@@ -76,7 +76,7 @@
     <Content Include="js\vendor\jquery-1.11.2.min.js" />
     <Content Include="js\vendor\modernizr-2.8.3-respond-1.4.2.min.js" />
     <Content Include="js\vendor\npm.js" />
-    <Content Include="KlassenDiagram.cd" />
+    <Content Include="old-KlassenDiagram.cd" />
     <Content Include="css\bootstrap-theme.css.map" />
     <Content Include="css\bootstrap.css.map" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
@@ -114,13 +114,10 @@
     </Compile>
     <Compile Include="classes\Backing.cs" />
     <Compile Include="classes\Category.cs" />
-    <Compile Include="classes\Class1.cs" />
-    <Compile Include="classes\Content.cs" />
     <Compile Include="classes\Database.cs" />
     <Compile Include="classes\DBAccount.cs" />
     <Compile Include="classes\DBProject.cs" />
     <Compile Include="classes\DBReward.cs" />
-    <Compile Include="classes\Pages.cs" />
     <Compile Include="classes\Project.cs" />
     <Compile Include="classes\SessionKey.cs" />
     <Compile Include="classes\DBLogin.cs" />

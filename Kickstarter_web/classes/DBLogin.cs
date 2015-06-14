@@ -82,16 +82,16 @@ namespace Kickstarter_web
         }
 
         /// <summary>
-        /// The get account.
+        /// Gets all the information from a given account ID
         /// </summary>
         /// <param name="account_id">
-        /// The account_id.
+        /// The account id that you want the details off
         /// </param>
         /// <param name="rights">
-        /// The rights.
+        /// The rights from the Account 
         /// </param>
         /// <returns>
-        /// The <see cref="Account"/>.
+        /// A Account or Admin Object from the givven account ID
         /// </returns>
         public Account GetAccount(int account_id, string rights)
         {

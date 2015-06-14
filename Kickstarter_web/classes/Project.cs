@@ -1,9 +1,9 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Project.cs" company="">
+// <copyright file="Project.cs" company="StartKicker">
 //   
 // </copyright>
 // <summary>
-//   The project.
+//   All the data from a project
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ namespace Kickstarter_web
     using System.CodeDom;
 
     /// <summary>
-    /// The project.
+    /// All the Data for a Project
     /// </summary>
     public class Project
     {
@@ -83,37 +83,37 @@ namespace Kickstarter_web
         /// Initializes a new instance of the <see cref="Project"/> class.
         /// </summary>
         /// <param name="title">
-        /// The title.
+        /// The title of the Project
         /// </param>
         /// <param name="shortBlurb">
-        /// The short blurb.
+        /// The short blurb of the Project.
         /// </param>
         /// <param name="projectLocation">
-        /// The project location.
+        /// The project location of the Project.
         /// </param>
         /// <param name="fundingDuration">
-        /// The funding duration.
+        /// The funding duration of the Project.
         /// </param>
         /// <param name="fundingGoal">
-        /// The funding goal.
+        /// The funding goal of the Project.
         /// </param>
         /// <param name="projectVideo">
-        /// The project video.
+        /// The project video of the Project.
         /// </param>
         /// <param name="projectDescription">
-        /// The project description.
+        /// The project description of the Project.
         /// </param>
         /// <param name="risksAndChallenges">
-        /// The risks and challenges.
+        /// The risks and challenges of the Project.
         /// </param>
         /// <param name="category">
-        /// The category.
+        /// The category of the Project.
         /// </param>
         /// <param name="subCategory">
-        /// The sub category.
+        /// The sub category of the Project.
         /// </param>
         /// <param name="projectID">
-        /// The project id.
+        /// The project id of the Project.
         /// </param>
         public Project(string title, string shortBlurb, string projectLocation, string fundingDuration, int fundingGoal, string projectVideo, string projectDescription, string risksAndChallenges, Category category, string subCategory, int projectID)
         {
