@@ -102,7 +102,50 @@ namespace Kickstarter_web
 
             return listProjects;
         }
+        public List<Project> Get4RandomProjects()
+        {
+            string sql = "SELECT p.TITLE, p.SHORTBLURB, p.CATEGORY_ID, c.KICKNAME, p.SUBCATEGORY_ID, p.PROJECT_LOCATION, p.FUNDING_DURATION, p.FUNDING_GOAL, p.PROJECTVIDEO, p.PROJECTDESCRIPTION, p.RISKSANDCHALLENGES, p.PROJECT_ID FROM KICKSTARTER_PROJECT p INNER JOIN KICKSTARTER_CATEGORY c ON c.CATEGORY_ID = p.CATEGORY_ID";
+            List<Project> listProjects = new List<Project>();
 
+            try
+            {
+                this.Connect();
+                OracleCommand cmd = new OracleCommand(sql, this.connection);
+                OracleDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        Category cat = new Category(
+                            Convert.ToInt32(reader["CATEGORY_ID"]),
+                            Convert.ToString(reader["KICKNAME"]));
+                        Project tempProject = new Project(
+                            Convert.ToString(reader["TITLE"]),
+                            Convert.ToString(reader["SHORTBLURB"]),
+                            Convert.ToString(reader["PROJECT_LOCATION"]),
+                            Convert.ToString(reader["FUNDING_DURATION"]),
+                            Convert.ToInt32(reader["FUNDING_GOAL"]),
+                            Convert.ToString(reader["PROJECTVIDEO"]),
+                            Convert.ToString(reader["PROJECTDESCRIPTION"]),
+                            Convert.ToString(reader["RISKSANDCHALLENGES"]),
+                            cat,
+                            Convert.ToString(reader["SUBCATEGORY_ID"]),
+                            Convert.ToInt32(reader["PROJECT_ID"]));
+                        listProjects.Add(tempProject);
+                    }
+                }
+            }
+            catch (OracleException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                this.connection.Close();
+            }
+
+            return listProjects;
+        }
         public List<Project> GetAllProjectsFromAccount(int accountID)
         {
             //string sql = "SELECT TITLE,SHORTBLURB, CATEGORY_ID, SUBCATEGORY_ID, PROJECT_LOCATION, FUNDING_DURATION, FUNDING_GOAL, PROJECTVIDEO, PROJECTDESCRIPTION, RISKSANDCHALLENGES, PROJECT_ID FROM KICKSTARTER_PROJECT WHERE ACCOUNT_ID = :accountID";

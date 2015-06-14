@@ -58,6 +58,14 @@ namespace Kickstarter_web.pages
              
         }
 
+        protected void Repeater_allProjects_PreRender(object sender, EventArgs e)
+        {
+            if (Repeater_allRewards.Items.Count < 1)
+            {
+                NoRecords.Text = "<h3>No Rewards for this project</h3>";
+            }
+        }
+
 
     }
 }

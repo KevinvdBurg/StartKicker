@@ -27,6 +27,14 @@ namespace Kickstarter_web
             PrevReward = prevReward;    
         }
 
+        public Rewards(string name, int price, string description, string delivery)
+        {
+            Name = name;
+            Price = price;
+            Description = description;
+            Delivery = delivery;
+        }
+
         public Rewards()
         {
             
