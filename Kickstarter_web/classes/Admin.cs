@@ -7,8 +7,6 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-
-
 using System;
 using System.Web;
 using System.Web.Services;
@@ -25,29 +23,17 @@ namespace Kickstarter_web
         /// <summary>
         /// Gets or sets the work email.
         /// </summary>
-        public string WorkEmail
-        {
-            get;
-            set;
-        }
+        public string WorkEmail { get; set; }
 
         /// <summary>
         /// Gets or sets the salary.
         /// </summary>
-        public double Salary
-        {
-            get;
-            set;
-        }
+        public double Salary { get; set; }
 
         /// <summary>
         /// Gets or sets the department.
         /// </summary>
-        public string Department
-        {
-            get;
-            set;
-        }
+        public string Department { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Admin"/> class.
@@ -88,12 +74,24 @@ namespace Kickstarter_web
         /// <param name="department">
         /// The department.
         /// </param>
-        public Admin(int accountId, string email, string phone, string name, string picture, string biography, string location, string timeZone, string vanityUrl, string workEmail, double salary, string department)
+        public Admin(
+            int accountId, 
+            string email, 
+            string phone, 
+            string name, 
+            string picture, 
+            string biography, 
+            string location, 
+            string timeZone, 
+            string vanityUrl, 
+            string workEmail, 
+            double salary, 
+            string department)
             : base(accountId, email, phone, name, picture, biography, location, timeZone, vanityUrl)
         {
             this.WorkEmail = workEmail;
             this.Salary = salary;
-            this.Department = department;    
+            this.Department = department;
         }
 
         /// <summary>
@@ -105,7 +103,6 @@ namespace Kickstarter_web
         public Admin(int accountId)
             : base(accountId)
         {
-            
         }
     }
 }

@@ -6,9 +6,6 @@
 //   The sign_up.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
-
-
 namespace Kickstarter_web.pages
 {
     using System.Threading;
@@ -27,7 +24,7 @@ namespace Kickstarter_web.pages
         /// <summary>
         /// The administrator.
         /// </summary>
-        Administrator administrator = new Administrator();
+        private Administrator administrator = new Administrator();
 
         /// <summary>
         /// The page_ load.
@@ -40,7 +37,6 @@ namespace Kickstarter_web.pages
         /// </param>
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         /// <summary>
@@ -54,18 +50,26 @@ namespace Kickstarter_web.pages
         /// </param>
         protected void regi_button_Click(object sender, EventArgs e)
         {
-            Account regiAccount = new Account(0, regi_email.Text, regi_tele.Text, regi_name.Text, string.Empty, regi_bio.Text, regi_loc.Text, regi_tijd.Text, regi_url.Text);
+            Account regiAccount = new Account(
+                0, 
+                regi_email.Text, 
+                regi_tele.Text, 
+                regi_name.Text, 
+                string.Empty, 
+                regi_bio.Text, 
+                regi_loc.Text, 
+                regi_tijd.Text, 
+                regi_url.Text);
 
             if (administrator.RegisteerAccount(regiAccount, regi_wachtwoord.Text))
             {
                 message.Text = "<p class=\"bg-success\"><br/>Registeren gelukt<br/></p>";
-                Response.Redirect("/index.aspx");  
+                Response.Redirect("/index.aspx");
             }
             else
             {
                 message.Text = "<p class=\"bg-danger\"><br/>Registeren er is iets fout gegaan<br/></p>";
             }
-            
         }
     }
 }

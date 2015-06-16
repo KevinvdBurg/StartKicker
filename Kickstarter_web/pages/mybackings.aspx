@@ -19,7 +19,7 @@
                      <tr><td>ProjectDescription</td><td><%# Eval("ProjectID.ProjectDescription") %></td></tr>   
                       <tr><td>Plegde Amount</td><td><%# Eval("PledgeAmount") %></td></tr>                
                      <tr><td>
-                         <asp:Button ID='BackProject' runat="server" Text="To Project Page"  ViewStateMode="Enabled" PostBackUrl='<%# "/pages/project.aspx?projectID="+Eval("ProjectID.ProjectID") %>'/></td><td>
+                         <asp:Button ID='BackProject' runat="server" Text="To Project Page"  ViewStateMode="Enabled" PostBackUrl='<%# "/pages/project.aspx?projectID=" + Eval("ProjectID.ProjectID") %>'/></td><td>
                       </table>
                   </div>
         </ItemTemplate>

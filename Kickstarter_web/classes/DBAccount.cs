@@ -7,8 +7,6 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-
-
 using System;
 using System.Web;
 using System.Web.Services;
@@ -40,13 +38,14 @@ namespace Kickstarter_web
         {
             bool resultaat = false;
 
-            string sql = "INSERT INTO KICKSTARTER_ACCOUNT(EMAIL, PHONE, KICKPASSWORD, KICKNAME, PICTURE, BIOGRAPHY, KICKLOCATION, TIMEZONE, VANITY_URL, RIGHTS) VALUES (:EMAIL ,:PHONE, :KICKPASSWORD, :KICKNAME,:PICTURE,:BIOGRAPHY,:KICKLOCATION,:TIMEZONE,:VANITY_URL,:RIGHTS)";
+            string sql =
+                "INSERT INTO KICKSTARTER_ACCOUNT(EMAIL, PHONE, KICKPASSWORD, KICKNAME, PICTURE, BIOGRAPHY, KICKLOCATION, TIMEZONE, VANITY_URL, RIGHTS) VALUES (:EMAIL ,:PHONE, :KICKPASSWORD, :KICKNAME,:PICTURE,:BIOGRAPHY,:KICKLOCATION,:TIMEZONE,:VANITY_URL,:RIGHTS)";
             try
             {
-                //Connects to the Database class
+                // Connects to the Database class
                 this.Connect();
                 OracleCommand cmd = new OracleCommand(sql, this.connection);
-                cmd.Parameters.Add(new OracleParameter("EMAIL",  account.Email.ToLower()));
+                cmd.Parameters.Add(new OracleParameter("EMAIL", account.Email.ToLower()));
                 cmd.Parameters.Add(new OracleParameter("PHONE", account.Phone));
                 cmd.Parameters.Add(new OracleParameter("KICKPASSWORD", password));
                 cmd.Parameters.Add(new OracleParameter("KICKNAME", account.Name));

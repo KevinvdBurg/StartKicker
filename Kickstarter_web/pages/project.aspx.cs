@@ -6,10 +6,6 @@
 //   The project.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
-
-
-
 namespace Kickstarter_web.pages
 {
     using System;
@@ -29,7 +25,7 @@ namespace Kickstarter_web.pages
         /// <summary>
         /// The administrator.
         /// </summary>
-        Administrator administrator = new Administrator();
+        private Administrator administrator = new Administrator();
 
         /// <summary>
         /// The page_ load.
@@ -56,7 +52,6 @@ namespace Kickstarter_web.pages
         /// </param>
         protected void backProject(object sender, EventArgs e)
         {
-            
             string projectID = Request["projectID"];
             int accountID = Convert.ToInt32(Session[myKeys.key_accountID]);
             int backamount = 0;
@@ -83,15 +78,13 @@ namespace Kickstarter_web.pages
                         {
                             MessageBox.Show(this, "Pledge can not be made");
                         }
-                        
                     }
                     else
                     {
                         MessageBox.Show(this, "Plegde Amount can't be 0");
                     }
-                }   
+                }
             }
-             
         }
 
         /// <summary>
@@ -110,7 +103,5 @@ namespace Kickstarter_web.pages
                 NoRecords.Text = "<h3>No Rewards for this project</h3>";
             }
         }
-
-
     }
 }

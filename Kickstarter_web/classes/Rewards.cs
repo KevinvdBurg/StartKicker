@@ -7,8 +7,6 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-
-
 using System;
 using System.Web;
 using System.Web.Services;
@@ -141,8 +139,6 @@ namespace Kickstarter_web
         /// </summary>
         public Rewards()
         {
-            
         }
-
     }
 }

@@ -6,11 +6,6 @@
 //   The add reward.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
 namespace Kickstarter_web.pages
 {
     using System;
@@ -19,6 +14,7 @@ namespace Kickstarter_web.pages
     using System.Web;
     using System.Web.UI;
     using System.Web.UI.WebControls;
+
     /// <summary>
     /// The add reward page
     /// </summary>
@@ -27,7 +23,7 @@ namespace Kickstarter_web.pages
         /// <summary>
         /// The administrator.
         /// </summary>
-        Administrator administrator = new Administrator();
+        private Administrator administrator = new Administrator();
 
         /// <summary>
         /// No Actions on the Page Load
@@ -40,7 +36,6 @@ namespace Kickstarter_web.pages
         /// </param>
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         /// <summary>
@@ -60,12 +55,22 @@ namespace Kickstarter_web.pages
             int prevReward;
             if (this.rew_prevreward.Items.Count == 0)
             {
-                thisReward = new Rewards(rew_name.Text, Convert.ToInt32(rew_price.Text), rew_decr.Text, rew_ship.Text, 0);
-            } 
+                thisReward = new Rewards(
+                    rew_name.Text, 
+                    Convert.ToInt32(rew_price.Text), 
+                    rew_decr.Text, 
+                    rew_ship.Text, 
+                    0);
+            }
             else
             {
                 prevReward = Convert.ToInt32(this.rew_prevreward.SelectedItem.Value);
-                thisReward = new Rewards(rew_name.Text, Convert.ToInt32(rew_price.Text), rew_decr.Text, rew_ship.Text, prevReward);
+                thisReward = new Rewards(
+                    rew_name.Text, 
+                    Convert.ToInt32(rew_price.Text), 
+                    rew_decr.Text, 
+                    rew_ship.Text, 
+                    prevReward);
             }
 
             if (this.administrator.InsertReward(thisReward, projectID))

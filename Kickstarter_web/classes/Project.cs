@@ -7,8 +7,6 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-
-
 using System;
 using System.Web;
 using System.Web.Services;
@@ -115,7 +113,18 @@ namespace Kickstarter_web
         /// <param name="projectID">
         /// The project id of the Project.
         /// </param>
-        public Project(string title, string shortBlurb, string projectLocation, string fundingDuration, int fundingGoal, string projectVideo, string projectDescription, string risksAndChallenges, Category category, string subCategory, int projectID)
+        public Project(
+            string title, 
+            string shortBlurb, 
+            string projectLocation, 
+            string fundingDuration, 
+            int fundingGoal, 
+            string projectVideo, 
+            string projectDescription, 
+            string risksAndChallenges, 
+            Category category, 
+            string subCategory, 
+            int projectID)
         {
             this.Title = title;
             this.ShortBlurb = shortBlurb;
@@ -136,9 +145,6 @@ namespace Kickstarter_web
         /// <param name="projectId"></param>
         public Project()
         {
-            
         }
     }
 }
-
-

@@ -26,7 +26,7 @@
                      <tr><td>RisksAndChallenges</td><td><%# Eval("RisksAndChallenges") %></td></tr> 
                       <tr><td>Location</td><td><%# Eval("ProjectLocation") %></td></tr>         
                      <tr><td>
-                         <asp:Button ID='BackProject' runat="server" Text="More Info"  ViewStateMode="Enabled" PostBackUrl='<%# "/pages/project.aspx?projectID="+Eval("ProjectID") %>'/></td><td>
+                         <asp:Button ID='BackProject' runat="server" Text="More Info"  ViewStateMode="Enabled" PostBackUrl='<%# "/pages/project.aspx?projectID=" + Eval("ProjectID") %>'/></td><td>
                       </table>
                   </div>
         </ItemTemplate>

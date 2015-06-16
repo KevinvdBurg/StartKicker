@@ -7,8 +7,6 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-
-
 using System;
 using System.Web;
 using System.Web.Services;
@@ -78,6 +76,7 @@ namespace Kickstarter_web
         public Account getAccountDetails(int account_id, string rights)
         {
             Account getAccountDetails = this.dblogin.GetAccount(account_id, rights);
+
             return getAccountDetails;
         }
 
@@ -149,7 +148,6 @@ namespace Kickstarter_web
         /// </returns>
         public List<Project> GetallFromAccountProjects(int accountID)
         {
-
             return this.dbProject.GetAllProjectsFromAccount(accountID);
         }
 
@@ -178,7 +176,6 @@ namespace Kickstarter_web
         {
             return this.dbProject.GetCategories();
         }
-
 
         // Not needed
         /// <summary>
@@ -271,6 +268,5 @@ namespace Kickstarter_web
         {
             return this.dbReward.Insert(reward, projectID);
         }
-
-    }    
+    }
 }

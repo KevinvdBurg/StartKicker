@@ -7,8 +7,6 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,7 +36,6 @@ namespace Kickstarter_web
         /// </param>
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
     }
 
@@ -59,10 +56,9 @@ namespace Kickstarter_web
         public static void Show(this Page Page, string Message)
         {
             Page.ClientScript.RegisterStartupScript(
-               Page.GetType(), 
-               "MessageBox", 
-               "<script language='javascript'>alert('" + Message + "');</script>"
-            );
+                Page.GetType(), 
+                "MessageBox", 
+                "<script language='javascript'>alert('" + Message + "');</script>");
         }
     }
 }

@@ -22,7 +22,7 @@
                                 <h3><%# Eval("Title") %></h3>
                                 <p><%# Eval("ShortBlurb") %></p>
                                 <p>
-                                    <asp:Button ID="info1" runat="server" Text="More Info!" class="btn btn-default" PostBackUrl='<%# "/pages/project.aspx?projectID="+Eval("ProjectID") %>'/>
+                                    <asp:Button ID="info1" runat="server" Text="More Info!" class="btn btn-default" PostBackUrl='<%# "/pages/project.aspx?projectID=" + Eval("ProjectID") %>'/>
                                 </p>
                             </div>
                         </div>

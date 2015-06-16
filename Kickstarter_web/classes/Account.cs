@@ -6,7 +6,6 @@
 //   Here are all details for an account
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
 namespace Kickstarter_web
 {
     using System;
@@ -29,65 +28,37 @@ namespace Kickstarter_web
         /// <summary>
         /// Gets or sets the phone.
         /// </summary>
-        public string Phone
-        {
-            get;
-            set;
-        }
+        public string Phone { get; set; }
 
         /// <summary>
         /// Gets or sets the name.
         /// </summary>
-        public string Name
-        {
-            get;
-            set;
-        }
+        public string Name { get; set; }
 
         /// <summary>
         /// Gets or sets the picture.
         /// </summary>
-        public string Picture
-        {
-            get;
-            set;
-        }
+        public string Picture { get; set; }
 
         /// <summary>
         /// Gets or sets the biography.
         /// </summary>
-        public string Biography
-        {
-            get;
-            set;
-        }
+        public string Biography { get; set; }
 
         /// <summary>
         /// Gets or sets the location.
         /// </summary>
-        public string Location
-        {
-            get;
-            set;
-        }
+        public string Location { get; set; }
 
         /// <summary>
         /// Gets or sets the time zone.
         /// </summary>
-        public string TimeZone
-        {
-            get;
-            set;
-        }
+        public string TimeZone { get; set; }
 
         /// <summary>
         /// Gets or sets the vanity_ url.
         /// </summary>
-        public string Vanity_URL
-        {
-            get;
-            set;
-        }
+        public string Vanity_URL { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Account"/> class.
@@ -119,7 +90,16 @@ namespace Kickstarter_web
         /// <param name="vanityUrl">
         /// The vanity url.
         /// </param>
-        public Account(int accountId, string email, string phone, string name, string picture, string biography, string location, string timeZone, string vanityUrl)
+        public Account(
+            int accountId, 
+            string email, 
+            string phone, 
+            string name, 
+            string picture, 
+            string biography, 
+            string location, 
+            string timeZone, 
+            string vanityUrl)
         {
             this.AccountID = accountId;
             this.Email = email;
@@ -142,7 +122,5 @@ namespace Kickstarter_web
         {
             this.AccountID = accountId;
         }
-
-
     }
 }

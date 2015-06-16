@@ -1,15 +1,11 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="dashboard.aspx.cs" company="">
+// <copyright file="dashboard.aspx.cs" company="ttest">
 //   
 // </copyright>
 // <summary>
 //   The dashboard.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
-
-
-
 namespace Kickstarter_web.pages
 {
     using System;
@@ -36,7 +32,7 @@ namespace Kickstarter_web.pages
         /// <summary>
         /// The administrator.
         /// </summary>
-        Administrator administrator = new Administrator();
+        private Administrator administrator = new Administrator();
 
         /// <summary>
         /// The page_ load.
@@ -49,9 +45,10 @@ namespace Kickstarter_web.pages
         /// </param>
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            var currentAccount = administrator.getAccountDetails((int)this.Session[myKeys.key_accountID], (string)this.Session[myKeys.key_rights]);
-            Gebruiker_ID.Text = "<h2>" + currentAccount.Name +"</h2>";
+            var currentAccount = administrator.getAccountDetails(
+                (int)this.Session[myKeys.key_accountID], 
+                (string)this.Session[myKeys.key_rights]);
+            Gebruiker_ID.Text = "<h2>" + currentAccount.Name + "</h2>";
         }
 
         /// <summary>
@@ -65,7 +62,6 @@ namespace Kickstarter_web.pages
         /// </param>
         protected void Repeater_projects_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
-            
         }
 
         /// <summary>

@@ -6,11 +6,6 @@
 //   The allprojects.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
 namespace Kickstarter_web.pages
 {
     using System;
@@ -21,6 +16,7 @@ namespace Kickstarter_web.pages
     using System.Web.UI.WebControls;
 
     using Kickstarter_web.classes;
+
     using System.Web.UI.HtmlControls;
 
     /// <summary>
@@ -31,7 +27,7 @@ namespace Kickstarter_web.pages
         /// <summary>
         /// The administrator.
         /// </summary>
-        Administrator administrator = new Administrator();
+        private Administrator administrator = new Administrator();
 
         /// <summary>
         /// The page_ load.

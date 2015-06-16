@@ -7,13 +7,11 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-
-
 using System;
+using System.ComponentModel;
 using System.Web;
 using System.Web.Services;
 using System.Web.Services.Protocols;
-using System.ComponentModel;
 
 namespace Kickstarter_web
 {
@@ -44,13 +42,15 @@ namespace Kickstarter_web
             string sql = string.Empty;
             if (reward.PrevReward == 0)
             {
-                sql = "INSERT INTO KICKSTARTER_REWARDS (PROJECT_ID, KICKNAME, PRICE, DESCRIPTION, ESTIMATEDDELIVERY, SHIPPINGDETAILS) VALUES(:projectID, :kickname, :price ,:description, :esti,:shipdetails)";
+                sql =
+                    "INSERT INTO KICKSTARTER_REWARDS (PROJECT_ID, KICKNAME, PRICE, DESCRIPTION, ESTIMATEDDELIVERY, SHIPPINGDETAILS) VALUES(:projectID, :kickname, :price ,:description, :esti,:shipdetails)";
             }
             else
             {
-                sql = "INSERT INTO KICKSTARTER_REWARDS (PROJECT_ID, KICKNAME, PRICE, DESCRIPTION, ESTIMATEDDELIVERY, SHIPPINGDETAILS, PREVREWARD_ID) VALUES(:projectID, :kickname, :price ,:description, :esti,:shipdetails, :prevrewardID)";
+                sql =
+                    "INSERT INTO KICKSTARTER_REWARDS (PROJECT_ID, KICKNAME, PRICE, DESCRIPTION, ESTIMATEDDELIVERY, SHIPPINGDETAILS, PREVREWARD_ID) VALUES(:projectID, :kickname, :price ,:description, :esti,:shipdetails, :prevrewardID)";
             }
-            
+
             bool resultaat = false;
             try
             {
@@ -81,7 +81,6 @@ namespace Kickstarter_web
             }
 
             return resultaat;
-
         }
 
         /// <summary>
@@ -96,7 +95,8 @@ namespace Kickstarter_web
         public Rewards GetReward(int rewardID)
         {
             // string sql = "SELECT p.TITLE, p.SHORTBLURB, p.CATEGORY_ID, c.KICKNAME, p.SUBCATEGORY_ID, p.PROJECT_LOCATION, p.FUNDING_DURATION, p.FUNDING_GOAL, p.PROJECTVIDEO, p.PROJECTDESCRIPTION, p.RISKSANDCHALLENGES, p.PROJECT_ID FROM KICKSTARTER_PROJECT p INNER JOIN KICKSTARTER_CATEGORY c ON c.CATEGORY_ID = p.CATEGORY_ID WHERE p.PROJECT_ID = :projectID";
-            string sql = "SELECT REWARD_ID, PROJECT_ID, KICKNAME, PRICE, DESCRIPTION, ESTIMATEDDELIVERY,SHIPPINGDETAILS, PREVREWARD_ID FROM KICKSTARTER_REWARDS WHERE REWARD_ID = :rewardID";
+            string sql =
+                "SELECT REWARD_ID, PROJECT_ID, KICKNAME, PRICE, DESCRIPTION, ESTIMATEDDELIVERY,SHIPPINGDETAILS, PREVREWARD_ID FROM KICKSTARTER_REWARDS WHERE REWARD_ID = :rewardID";
 
             Rewards thisRewards = new Rewards();
             try
@@ -114,7 +114,7 @@ namespace Kickstarter_web
                         Convert.ToString(reader["ESTIMATEDDELIVERY"]), 
                         Convert.ToInt32(reader["PREVREWARD_ID"]), 
                         Convert.ToInt32(reader["REWARD_ID"]));
-                      
+
                     thisRewards = tempReward;
                 }
             }
@@ -141,7 +141,8 @@ namespace Kickstarter_web
         /// </returns>
         public List<Rewards> GetAllRewardsPerProject(int projectID)
         {
-            string sql = "SELECT REWARD_ID, PROJECT_ID, KICKNAME, PRICE, DESCRIPTION, ESTIMATEDDELIVERY,SHIPPINGDETAILS, PREVREWARD_ID FROM KICKSTARTER_REWARDS WHERE PROJECT_ID = :projectID";
+            string sql =
+                "SELECT REWARD_ID, PROJECT_ID, KICKNAME, PRICE, DESCRIPTION, ESTIMATEDDELIVERY,SHIPPINGDETAILS, PREVREWARD_ID FROM KICKSTARTER_REWARDS WHERE PROJECT_ID = :projectID";
             List<Rewards> allRewards = new List<Rewards>();
             try
             {
@@ -162,7 +163,6 @@ namespace Kickstarter_web
                             Convert.ToInt32(reader["REWARD_ID"]));
                         allRewards.Add(tempReward);
                     }
-                       
                 }
             }
             catch (OracleException e)
@@ -174,7 +174,7 @@ namespace Kickstarter_web
                 this.connection.Close();
             }
 
-            return allRewards; 
+            return allRewards;
         }
     }
 }

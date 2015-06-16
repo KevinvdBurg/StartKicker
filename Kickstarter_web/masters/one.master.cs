@@ -7,8 +7,6 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +26,7 @@ namespace Kickstarter_web
         /// <summary>
         /// The administrator.
         /// </summary>
-        Administrator administrator = new Administrator();
+        private Administrator administrator = new Administrator();
 
         /// <summary>
         /// The page_ load.
@@ -50,9 +48,11 @@ namespace Kickstarter_web
             }
             else
             {
-
-                Account account = administrator.getAccountDetails(Convert.ToInt32(Session[myKeys.key_accountID]), Convert.ToString(Session[myKeys.key_rights]));
-                menuOpties.InnerHtml = "<li><a href=\"#\">" + account.Name + "</a></li><li><a href=\"/pages/dashboard.aspx\">Dashboard</a></li>";
+                Account account = administrator.getAccountDetails(
+                    Convert.ToInt32(Session[myKeys.key_accountID]), 
+                    Convert.ToString(Session[myKeys.key_rights]));
+                menuOpties.InnerHtml = "<li><a href=\"#\">" + account.Name
+                                       + "</a></li><li><a href=\"/pages/dashboard.aspx\">Dashboard</a></li>";
             }
         }
 
@@ -73,14 +73,14 @@ namespace Kickstarter_web
             {
                 Session[myKeys.key_accountID] = User.AccountID;
                 Session[myKeys.key_rights] = "admin";
-                Response.Redirect("/pages/dashboard.aspx");  
+                Response.Redirect("/pages/dashboard.aspx");
             }
             else if (User is Account)
             {
                 Session[myKeys.key_accountID] = User.AccountID;
                 Session[myKeys.key_rights] = "user";
                 Console.WriteLine("user");
-                Response.Redirect("/pages/dashboard.aspx");  
+                Response.Redirect("/pages/dashboard.aspx");
             }
             else
             {

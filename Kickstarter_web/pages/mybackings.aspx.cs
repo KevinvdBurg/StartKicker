@@ -6,14 +6,8 @@
 //   The mybackings.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
 namespace Kickstarter_web.pages
 {
-
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -38,7 +32,6 @@ namespace Kickstarter_web.pages
         /// </param>
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         /// <summary>

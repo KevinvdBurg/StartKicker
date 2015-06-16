@@ -6,11 +6,6 @@
 //   The makeproject.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
 namespace Kickstarter_web.pages
 {
     using System;
@@ -21,6 +16,7 @@ namespace Kickstarter_web.pages
     using System.Web.UI.WebControls;
 
     using Kickstarter_web.classes;
+
     /// <summary>
     /// The makeproject.
     /// </summary>
@@ -29,7 +25,7 @@ namespace Kickstarter_web.pages
         /// <summary>
         /// The administrator.
         /// </summary>
-        Administrator administrator = new Administrator();
+        private Administrator administrator = new Administrator();
 
         /// <summary>
         /// The page_ load.
@@ -42,7 +38,6 @@ namespace Kickstarter_web.pages
         /// </param>
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         /// <summary>
@@ -58,8 +53,21 @@ namespace Kickstarter_web.pages
         {
             if (Page.IsValid)
             {
-                Category newCategory = new Category(Convert.ToInt32(proj_category.SelectedItem.Value), Convert.ToString(proj_category.SelectedItem.Text));
-                Project newProject = new Project(proj_title.Text, proj_blurb.Text, proj_location.Text, proj_funding_duration.Text, Convert.ToInt32(proj_funding_goal.Text), proj_video.Text, proj_disc.Text, proj_riskcha.Text, newCategory, "1", 0);
+                Category newCategory = new Category(
+                    Convert.ToInt32(proj_category.SelectedItem.Value), 
+                    Convert.ToString(proj_category.SelectedItem.Text));
+                Project newProject = new Project(
+                    proj_title.Text, 
+                    proj_blurb.Text, 
+                    proj_location.Text, 
+                    proj_funding_duration.Text, 
+                    Convert.ToInt32(proj_funding_goal.Text), 
+                    proj_video.Text, 
+                    proj_disc.Text, 
+                    proj_riskcha.Text, 
+                    newCategory, 
+                    "1", 
+                    0);
 
                 if (administrator.CreeerProject(newProject, Convert.ToInt32(Session[myKeys.key_accountID])))
                 {
@@ -80,7 +88,7 @@ namespace Kickstarter_web.pages
         protected void CustomValidatorproj_title_OnServerValidate(object source, ServerValidateEventArgs args)
         {
             Console.WriteLine("In Validator?");
-           
+
             if (proj_title.Text.Length > 0)
             {
                 args.IsValid = true;
@@ -89,7 +97,6 @@ namespace Kickstarter_web.pages
             {
                 args.IsValid = false;
             }
-            
         }
     }
 }

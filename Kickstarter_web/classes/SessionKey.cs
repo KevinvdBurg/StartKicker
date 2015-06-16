@@ -7,8 +7,6 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +24,6 @@ namespace Kickstarter_web.classes
         /// </summary>
         private myKeys()
         {
-            
         }
 
         /// <summary>
@@ -39,5 +36,4 @@ namespace Kickstarter_web.classes
         /// </summary>
         public static readonly string key_rights = "rights";
     }
-    
 }

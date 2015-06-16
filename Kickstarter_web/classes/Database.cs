@@ -3,12 +3,10 @@
 //   
 // </copyright>
 // <summary>
-//   The database connection class. All the connections to the database will go trough here. 
+//   The database connection class. All the connections to the database will go trough here.
 //   This is so there only needs to be one connectionString and if there is a change in the connection you only needs to change this variable
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
-
 
 using System;
 using System.Web;
@@ -39,14 +37,14 @@ namespace Kickstarter_web
         /// The Password                PASSWORD=K9k8zLNCO0
         /// The User ID                 USER ID=dbi292421
         /// </summary>
-        protected string connectionString = "DATA SOURCE=//192.168.15.50:1521/fhictora;PASSWORD=K9k8zLNCO0;USER ID=dbi292421";
+        protected string connectionString =
+            "DATA SOURCE=//192.168.15.50:1521/fhictora;PASSWORD=K9k8zLNCO0;USER ID=dbi292421";
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Database"/> class.
         /// </summary>
         public Database()
         {
-
         }
 
         /// <summary>

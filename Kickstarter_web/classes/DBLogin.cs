@@ -7,8 +7,6 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-
-
 using System;
 using System.Web;
 using System.Web.Services;
@@ -100,12 +98,13 @@ namespace Kickstarter_web
 
             if (rights == "admin")
             {
-                sql = "SELECT a.email, a.phone, a.kickname, a.picture, a.biography, a.kicklocation, a.timezone, a.vanity_url, a.rights, ad.kickadmin, ad.workemail, ad.salary, ad.DEPARTMENT FROM KICKSTARTER_ACCOUNT a INNER JOIN KICKSTARTER_ADMIN ad ON a.ACCOUNT_ID = ad.ADMIN_ID WHERE ACCOUNT_ID = :ACCOUNT_ID";
+                sql =
+                    "SELECT a.email, a.phone, a.kickname, a.picture, a.biography, a.kicklocation, a.timezone, a.vanity_url, a.rights, ad.kickadmin, ad.workemail, ad.salary, ad.DEPARTMENT FROM KICKSTARTER_ACCOUNT a INNER JOIN KICKSTARTER_ADMIN ad ON a.ACCOUNT_ID = ad.ADMIN_ID WHERE ACCOUNT_ID = :ACCOUNT_ID";
             }
             else
             {
-                sql = "SELECT email, phone, kickname, picture, biography, kicklocation, timezone, vanity_url, rights FROM KICKSTARTER_ACCOUNT WHERE ACCOUNT_ID = :ACCOUNT_ID";
-
+                sql =
+                    "SELECT email, phone, kickname, picture, biography, kicklocation, timezone, vanity_url, rights FROM KICKSTARTER_ACCOUNT WHERE ACCOUNT_ID = :ACCOUNT_ID";
             }
 
             try
@@ -117,7 +116,6 @@ namespace Kickstarter_web
 
                 if (reader.HasRows)
                 {
-
                     if (rights == "user")
                     {
                         newAccount = new Account(
@@ -133,7 +131,6 @@ namespace Kickstarter_web
                     }
                     else if (rights == "admin")
                     {
-                        
                         newAccount = new Admin(
                             account_id, 
                             Convert.ToString(reader["email"]), 

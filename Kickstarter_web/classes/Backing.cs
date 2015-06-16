@@ -7,8 +7,6 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-
-
 using System;
 using System.Web;
 using System.Web.Services;
@@ -62,8 +60,7 @@ namespace Kickstarter_web
             this.PledgeAmount = pledgeAmount;
             this.Betaald = betaald;
             this.ProjectID = projectId;
-            this.AccountID = accountId;  
+            this.AccountID = accountId;
         }
-
     }
 }

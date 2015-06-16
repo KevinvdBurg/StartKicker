@@ -6,11 +6,8 @@
 //   The Index from the website
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
-
 namespace Kickstarter_web
 {
-
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -34,7 +31,6 @@ namespace Kickstarter_web
         /// </param>
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
     }
 }
